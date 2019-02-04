@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Startbootstrap Freelancer – Github</title><script>document.documentElement.className = document.documentElement.className.replace("no-js","js");</script><link rel="dns-prefetch" href="//fonts.googleapis.com"><link rel="dns-prefetch" href="//s.w.org"><link rel="stylesheet" id="boxstyle-style-css" href="https://ironsummitmedia.github.io/wp-content/themes/boxstyle/style.css" type="text/css" media="all"><style id="boxstyle-style-inline-css" type="text/css">
+body { font-family: "Roboto", Arial, sans-serif; }
+
+img,
+.alx-tab img, 
+.alx-posts img,
+#profile-image img,
+.post-list .post-thumbnail img,
+.post-format,
+.post-thumbnail img,
+#flexslider-featured.featured .post-inner { -webkit-border-radius: px; border-radius: px; }
+#flexslider-featured.featured .post-title { border-radius: 0 0 px px; }
+				
+
+</style><link rel="stylesheet" id="boxstyle-responsive-css" href="https://ironsummitmedia.github.io/wp-content/themes/boxstyle/responsive.css" type="text/css" media="all"><link rel="stylesheet" id="boxstyle-font-awesome-css" href="https://ironsummitmedia.github.io/wp-content/themes/boxstyle/fonts/font-awesome.min.css" type="text/css" media="all"><link rel="stylesheet" id="roboto-css" href="//fonts.googleapis.com/css?family=Roboto%3A400%2C300italic%2C300%2C400italic%2C700&subset=latin%2Clatin-ext&ver=4.9.9" type="text/css" media="all"><script type="text/javascript" src="https://ironsummitmedia.github.io/wp-includes/js/jquery/jquery.js"></script><script type="text/javascript" src="https://ironsummitmedia.github.io/wp-includes/js/jquery/jquery-migrate.min.js"></script><script type="text/javascript" src="https://ironsummitmedia.github.io/wp-content/themes/boxstyle/js/jquery.flexslider.min.js"></script></head><body class="page-template-default page page-id-33 col-2cr full-width logged-out">
+
+<div id="wrapper">
+
+	<div class="container" id="page">
+		<div class="container-inner">			
+			<div class="main">
+			
+				<header id="header"><div class="group">
+						
+													<div class="group pad">
+								<p class="site-title"><a href="https://ironsummitmedia.github.io/" rel="home">Github</a></p>
+																	<p class="site-description">ironsummitmedia</p>
+															</div>
+												
+						
+					</div>
+					
+										
+					<div id="header-sticky">
+											</div>
+				
+				</header><div class="sidebar s2">
+																				</div>
+				<div class="clear"></div>
+
+								
+				<div class="main-inner group">
+
+<div class="content">
+	
+	<div class="page-title group">
+	<div class="pad group">
+
+			<h2>Startbootstrap Freelancer</h2>
+
+			
+	</div>
+</div>	
+	<div class="pad group">
+		
+				
+			<article class="group post-33 page type-page status-publish hentry"><div class="entry themeform">
+					<p><strong>4.3</strong> <strong>Restoring Post.Office</strong> <em><strong>3.0 Only – NT Only – My system crashed. How do I restore Post.Office from my </strong><strong>standard, full system backup files?</strong></em></p>
+<ol><li>Once you have re-installed NT, you must re-install Post.Office on the machine by: – Running Setup.exe – Accessing Post.Office as “Postmaster” to complete the Installation Wrap-up Form</li>
+<li>After Post.Office has been re-installed, stop the Post.Office service.</li>
+<li>Make sure that you are logged in as the Local Administrator of your host. Logging in as the Domain Administrator is not sufficient unless the machine you are using is a Primary Domain Controller.</li>
+<li>Using REGEDT32 restore the backup version of your Post.Office Registry key from disk on top of the existing Post.Office Registry key
+<ul><li>Highlight HKEY_LOCAL_MACHINE\SOFTWARE\Software.com\Post.Office</li>
+<li>Select Registry -> Restore -> specify filename of Post.OfficeRegKey backup (suggested backup name was: Post.Officev3.0RegKey)</li>
+</ul></li>
+<li>Copy the PostOfficeDir directory from backup over the new PostOfficeDir directory. This is important as this directory contains your account information in 3.0.</li>
+<li>Copy the mailbox directory from backup over the new MailboxDir directory.</li>
+<li>Run poperms to reset the permissions back to the default installation permissions: -a -u</li>
+<li>Re-start the Post.Office service.</li>
+</ol><p><em><strong>1.9.3, 2.0, 3.0 Only – NT Only – I was unable to upgrade successfully to version 3.0. </strong><strong>How can I restore to the prior version of Post.Office using my standard, full system </strong><strong>backup files?</strong></em> If you made a total backup of your Post.Office system before upgrading (as instructed in the upgrade procedure) you should have copies of the following items: <strong>Registry information</strong></p>
+<ul><li>HKEY_LOCAL_MACHINE\SOFTWARE\Software.com\Post.Office (suggested name & location: <em>anotherhost</em>\temp\Post.OfficeRegKeyBackup)</li>
+<li>HKEY_LOCAL_MACHINE\SOFTWARE\Software.com\Post.Office\MTA-Accounts (suggested name & location: <em>anotherhost</em>\temp\MTA-AccountsRegKeyBackup)</li>
+</ul><p><strong>File system information</strong></p>
+<ul><li>The Program Directory containing Post.Office executables (suggested name & location: <em>anotherhost</em>\temp\Post.OfficeBackupexecs)</li>
+<li>The Post.Office Directory containing spooling and configuration information (suggested name & location: <em>anotherhost</em>\temp\Post.OfficeBackupconfig)</li>
+<li>The Mailbox Directory containing your mailbox information (suggested name & location: <em>anotherhost</em>\temp\Post.OfficeBackupmailbox)</li>
+</ul><p>The instructions that follow will guide you through the restoration process. They assume that you named the backup files as suggested. If you selected other names or locations for those files you will need to adjust the instructions accordingly.</p>
+<ol><li>Make sure that you are logged in as the Local Administrator of your host. Logging in as the Domain Administrator is not sufficient unless the machine you are using is a Primary Domain Controller.</li>
+<li>Shutdown the Post.Office Service: Panel -> Services -> Post.Office MTA -> Stop</li>
+<li>Set permissions to the default permissions for your Post.Office-User using the poperms utility delivered with Post.Office version 3.0:
+<ul><li>Return to the DOS command line (within the Post.Office executables/others directory) and type: poperms -a -u</li>
+</ul></li>
+<li>Back up the half converted 3.0 version of the Post.Office Registry key:
+<ul><li>Launch REGEDT32.exe.</li>
+<li>Follow the path HKEY_LOCAL_MACHINE/SOFTWARE/software.com to locate the Post.Office key.</li>
+<li>Select the Post.Office key.</li>
+<li>Pull down the Registry menu and choose the Save Key command. (suggested name to save under: Post.OfficeRegKey3.0)</li>
+</ul></li>
+<li>Restore the prior version of the Post.Office Registry key:
+<ul><li>Make sure that the Post.Office key remains selected (highlighted).</li>
+<li>Pull down the Registry menu and choose the Restore command.</li>
+<li>Use the browser window to locate and select your backup copy of the prior Post.Office Registry key (suggested name was Post.OfficeRegKeyBackup) then click on the OK button.</li>
+<li>Confirm your desire to overwrite the current key by clicking on the YES button of the alert box that appears.</li>
+</ul></li>
+<li>Back up the half converted 3.0 Post.Office executables you have now.
+<ul><li>Launch the File Manager.</li>
+<li>Locate and select the Post.Office directory. (the default location is \win32app\Post.Office)</li>
+<li>From the File menu choose the Move command.</li>
+<li>Type the name and location of the backup directory in the To: field provided, then click on the OK button. (suggested name and location is <em>anotherhost</em>\temp\Post.Office3.0exec)</li>
+</ul></li>
+<li>Move the Post.Office.dll out of the system directory (WINNT/system32) and rename it (suggested name: 30postoffice.save).</li>
+<li>Restore your saved Post.Office executables (the prior version).
+<ul><li>Locate and select your backup copy of the prior Post.Office executables. (suggested name and location was <em>anotherhost</em>\temp\Post.OfficeBackupexec)</li>
+<li>From the File menu choose the Move command.</li>
+<li>Type the new name and location in the To: field provided, then click on the OK button. (Default name and location is \win32app\Post.Office)</li>
+<li>Confirm that you wish to replace the existing directory.</li>
+</ul></li>
+<li>Back up the current, half converted Post.Office 3.0 configuration information.
+<ul><li>Locate and select the Post.Office directory. (the default location is \winnt35\system32\spool\Post.Office)</li>
+<li>From the File menu choose the Move command.</li>
+<li>Type the new name and location in the To: field provided, then click on the OK button. (suggested name and location is <em>anotherhost</em>\temp\Post.Office3.0config)</li>
+</ul></li>
+<li>Restore your saved Post.Office configuration information (the prior version).
+<ul><li>Locate and select your backup copy of the prior Post.Office executables. (suggested name and location was <em>anotherhost</em>\temp\Post.OfficeBackupconfig)</li>
+<li>From the File menu choose the Move command</li>
+<li>Type the new name and location in the To: field provided, then click on the OK button. (default name and location is \winnt35\system32\spool\Post.Office)</li>
+<li>Confirm that you wish to replace the existing directory.</li>
+</ul></li>
+<li>Back up the half converted Post.Office 3.0 mailboxes you have now.
+<ul><li>Locate and select the Post.Office mailbox directory. (the default location is \winnt35\system32\spool\Post.Office\mailbox)</li>
+<li>From the File menu choose the Move command.</li>
+<li>Type the new name and location in the To: field provided, then click on the OK button. (suggested name and location is anotherhost\temp\Post.Office3.0mailbox)</li>
+</ul></li>
+<li>Restore your saved Post.Office mailboxes (from before the upgrade).
+<ul><li>Locate and select your backup copy of the prior Post.Office mailboxes. (suggested name and location was <em>anotherhost</em>\temp\Post.OfficeBackupmailbox)</li>
+<li>From the File menu choose the Move command.</li>
+<li>Type the new name and location in the To: field provided, then click on the OK button. (default name and location is \winnt35\system32\spool\Post.Office\mailbox)</li>
+<li>Confirm that you wish to replace the existing directory.</li>
+</ul></li>
+<li>If you are restoring to Post.Office version 2.0, you will need to locate the 2.0 version of our poperms utility on our ftp site (ftp ftp.software.com). It can be found by following the path through the 2.0 version/operating system/platform/utilities directories. Run the poperms tool to set permissions back to the default settings. Return to the DOS command line (within the Post.Office executables directory) and type: poperms -a -u</li>
+<li>If you are restoring to Post.Office version 1.9.3, you will need to manually verify that your Registry and file system permissions are correct. Please refer to the section of this FAQ titled <em>Permissions and Directory Locations</em> which identifies the proper permission settings for Post.Office v1.9.3.</li>
+<li>Startup the Post.Office Service: Panel -> Services -> Post.Office MTA -> Start</li>
+</ol><div class="clear"></div>
+				</div>
+				
+			</article></div>
+
+</div>
+
+
+	<div class="sidebar s1">
+		
+		<div class="sidebar-content">
+			
+						
+						
+			<div id="pages-2" class="widget widget_pages"><h3 class="group"><span>Pages</span></h3>		<ul><li class="page_item page-item-37"><a href="https://ironsummitmedia.github.io/home/">Home</a></li>
+<li class="page_item page-item-9"><a href="https://ironsummitmedia.github.io/startbootstrap-agency/">Startbootstrap Agency</a></li>
+<li class="page_item page-item-35"><a href="https://ironsummitmedia.github.io/startbootstrap-agency-2/">Startbootstrap Agency</a></li>
+<li class="page_item page-item-27"><a href="https://ironsummitmedia.github.io/startbootstrap-creative/">Startbootstrap Creative</a></li>
+<li class="page_item page-item-33 current_page_item"><a href="https://ironsummitmedia.github.io/startbootstrap-freelancer/">Startbootstrap Freelancer</a></li>
+<li class="page_item page-item-29"><a href="https://ironsummitmedia.github.io/startbootstrap-landing-page/">Startbootstrap Landing Page</a></li>
+<li class="page_item page-item-25"><a href="https://ironsummitmedia.github.io/startbootstrap-sb-admin/">Startbootstrap SB Admin</a></li>
+<li class="page_item page-item-31"><a href="https://ironsummitmedia.github.io/startbootstrap-sbadmin-2/">Startbootstrap SBAdmin 2</a></li>
+		</ul></div>			
+		</div>
+		
+	</div>
+	
+
+				</div>
+				
+				<footer id="footer"><div id="footer-bottom">
+						
+						<a id="back-to-top" href="#"><i class="fa fa-angle-up"></i></a>
+							
+						<div class="pad group">
+							
+							<div class="grid one-half">
+								
+																
+						
+								
+							</div>
+							
+							<div class="grid one-half last">	
+																																</div>
+						
+						</div>
+
+					</div>
+
+				</footer></div>	
+		</div>
+	</div>
+
+</div>
+
+<script type="text/javascript" src="https://ironsummitmedia.github.io/wp-content/themes/boxstyle/js/jquery.fitvids.js"></script><script type="text/javascript" src="https://ironsummitmedia.github.io/wp-content/themes/boxstyle/js/owl.carousel.min.js"></script><script type="text/javascript" src="https://ironsummitmedia.github.io/wp-content/themes/boxstyle/js/jq-sticky-anything.min.js"></script><script type="text/javascript" src="https://ironsummitmedia.github.io/wp-content/themes/boxstyle/js/scripts.js"></script></body></html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Startbootstrap Landing Page – Github</title><script>document.documentElement.className = document.documentElement.className.replace("no-js","js");</script><link rel="dns-prefetch" href="//fonts.googleapis.com"><link rel="dns-prefetch" href="//s.w.org"><link rel="stylesheet" id="boxstyle-style-css" href="https://ironsummitmedia.github.io/wp-content/themes/boxstyle/style.css" type="text/css" media="all"><style id="boxstyle-style-inline-css" type="text/css">
+body { font-family: "Roboto", Arial, sans-serif; }
+
+img,
+.alx-tab img, 
+.alx-posts img,
+#profile-image img,
+.post-list .post-thumbnail img,
+.post-format,
+.post-thumbnail img,
+#flexslider-featured.featured .post-inner { -webkit-border-radius: px; border-radius: px; }
+#flexslider-featured.featured .post-title { border-radius: 0 0 px px; }
+				
+
+</style><link rel="stylesheet" id="boxstyle-responsive-css" href="https://ironsummitmedia.github.io/wp-content/themes/boxstyle/responsive.css" type="text/css" media="all"><link rel="stylesheet" id="boxstyle-font-awesome-css" href="https://ironsummitmedia.github.io/wp-content/themes/boxstyle/fonts/font-awesome.min.css" type="text/css" media="all"><link rel="stylesheet" id="roboto-css" href="//fonts.googleapis.com/css?family=Roboto%3A400%2C300italic%2C300%2C400italic%2C700&subset=latin%2Clatin-ext&ver=4.9.9" type="text/css" media="all"><script type="text/javascript" src="https://ironsummitmedia.github.io/wp-includes/js/jquery/jquery.js"></script><script type="text/javascript" src="https://ironsummitmedia.github.io/wp-includes/js/jquery/jquery-migrate.min.js"></script><script type="text/javascript" src="https://ironsummitmedia.github.io/wp-content/themes/boxstyle/js/jquery.flexslider.min.js"></script></head><body class="page-template-default page page-id-29 col-2cr full-width logged-out">
+
+<div id="wrapper">
+
+	<div class="container" id="page">
+		<div class="container-inner">			
+			<div class="main">
+			
+				<header id="header"><div class="group">
+						
+													<div class="group pad">
+								<p class="site-title"><a href="https://ironsummitmedia.github.io/" rel="home">Github</a></p>
+																	<p class="site-description">ironsummitmedia</p>
+															</div>
+												
+						
+					</div>
+					
+										
+					<div id="header-sticky">
+											</div>
+				
+				</header><div class="sidebar s2">
+																				</div>
+				<div class="clear"></div>
+
+								
+				<div class="main-inner group">
+
+<div class="content">
+	
+	<div class="page-title group">
+	<div class="pad group">
+
+			<h2>Startbootstrap Landing Page</h2>
+
+			
+	</div>
+</div>	
+	<div class="pad group">
+		
+				
+			<article class="group post-29 page type-page status-publish hentry"><div class="entry themeform">
+					<table><tbody><tr><td>4.1 Tools for Use in Restoring and Relocating Post.Office 2.0 and 3.0 Only – NT only – How do I use the Post.Office permission setting tool (poperms)? Poperms is a utility we developed which allows you to modify NT permissions in order to facilitate the backing up, restoring, and relocating of Post.Office. You will find the poperms tool referenced in multiple instruction sets. Each time the tool is referenced the proper parameters will be specified. The program runs from the command line using the following syntax: POPERMS [-r] [-p] [-o] [-l] [-m] [-f] [-a] [-everyone] [-u</td>
+<td>user_name] Where: -r = Set registry permissions -p = Set Post.Office Program directory permissions -o = Set Post.Office Spool directory permissions -l = Set Post.Office Log directory permissions -m = Set Post.Office Mailbox directory permissions -f = Set all Post.Office File system directory permissions -a = Set ALL Post.Office File AND Registry permissions -everyone = give full permissions to the group Everyone in addition to the user specified -u = use the post.office user that the service logs in as user_name = name of user to give permissions to To execute a command successfully you must supply at least one parameter from the first group, and only one from the second group. The program will then set the requested files and registry entries to Full Control for the user specified (and additionally allow Full Control to the group Everyone if that option is selected). Note: You must be an ADMINISTRATOR to run this program, and the utility must be placed in the Post.Office executables directory! If you are running 3.0, the poperms utility is located in your executable directory. If you are running 2.0, you can obtain a copy of the poperms software by doing the following:</td>
+</tr></tbody></table><div class="highlighter-rouge">
+<div class="highlight">
+<pre class="highlight"><code>From the DOS prompt, change to the directory containing the Post.Office executables directory. For example, if your Post.Office executables directory is \win32app\post.office, please cd to \win32app\post.office.
+Type: ftp ftp.software.com
+Log in as anonymous using your e-mail address as the password.
+Change directory to the location of the appropriate package by typing cd ftp\postoffice\archive\po20\nt\<yourplatform>\utilities
+Download the executables in binary mode by typing: bin get poperms.exe
+</code></pre>
+</div>
+</div>
+<p>4.2 Backing up Post.Office 2.0 and 3.0 Only – NT Only – How do I do a standard, full system backup of Post.Office? Safe software practices dictate that you back up your mail server on a regular basis. Follow the steps outlined below to back up the current version of Post.Office. Note: Instructions on restoring your system from the backup files are provided in the Restoring Post.Office section of the FAQ, which follows.</p>
+<div class="highlighter-rouge">
+<div class="highlight">
+<pre class="highlight"><code>Make sure that you are logged in as the Local Administrator of your host. Logging in as the Domain Administrator is not sufficient unless the machine you are using is a Primary Domain Controller.
+Stop Post.Office using Control Panel -> Services -> Post.Office MTA -> Stop or from the command line "net stop post.office"
+Open the permissions to "everyone" using poperms -a -Everyone -u
+Back up the required Registry information by running the Registry Editor, (REGEDT32.EXE), locating the following keys, and saving each one independently by selecting the desired key, pulling down the Registry menu, and then choosing the Save Key command. - HKEY_LOCAL_MACHINE\SOFTWARE\Software.com\Post.Office (suggested name & location: anotherhost\temp\Post.OfficeRegKeyversion#) -HKEY_LOCAL_MACHINE\SOFTWARE\Software.com\Post.Office\MTA-Accounts (suggested name & location: anotherhost\temp\MTA-AccountsRegKeyversion#)
+Back up the required file system information. - The Post.Office Spooling Directory containing "account" and configuration information (suggested name & location: anotherhost\temp\Post.Officeversion#config) - the Program Directory containing Post.Office executables (suggested name & location: anotherhost\temp\Post.Officeversion#execs) - the Mailbox Directory containing your mailbox information (suggested name & location: anotherhost\temp\Post.Officeversion#mailbox) The exact location of the required directories can be found via the Program Manager by double clicking on the Main\Control Panel\Post.Office icons in the order indicated. When the Post.Office applet window appears look at the entries at the bottom of the window. Or, if you are running 3.0, in the Licensing and Configuration Web Page.
+Close the permissions back to the installation defaults by using poperms: poperms -a -u
+Start Post.Office using Control Panel -> Services -> Post.Office MTA -> Start or from the command line "net start post.office"
+</code></pre>
+</div>
+</div>
+<p>1.9.3 Only – NT Only – How do I do a standard, full system backup of Post.Office? Safe software practices dictate that you back up your mail server on a regular basis. Follow the steps outlined below to back up the current version of Post.Office. Note: Instructions on restoring your system from the backup files are provided in the Restoring Post.Office section of the FAQ, which follows.</p>
+<div class="highlighter-rouge">
+<div class="highlight">
+<pre class="highlight"><code>Stop Post.Office using Control Panel -> Services -> Post.Office MTA -> Stop or from the command line "net stop post.office"
+Back up the required Registry information by running the Registry Editor, (REGEDT32.EXE), locating the following keys, and saving each one independently by selecting the desired key, pulling down the Registry menu, and then choosing the Save Key command. - HKEY_LOCAL_MACHINE\SOFTWARE\Software.com\Post.Office (suggested name & location: anotherhost\temp\Post.OfficeRegKeyversion#) -HKEY_LOCAL_MACHINE\SOFTWARE\Software.com\Post.Office\MTA-Accounts (suggested name & location: anotherhost\temp\MTA-AccountsRegKeyversion#)
+Back up the required file system information. - The Post.Office Spooling Directory containing "account" and configuration information (suggested name & location: notherhost\temp\Post.Officeversion#config) - the Program Directory containing Post.Office executables (suggested name & location: anotherhost\temp\Post.Officeversion#execs) - the Mailbox Directory containing your mailbox information (suggested name & location: anotherhost\temp\Post.Officeversion#mailbox) The exact location of the required directories can be found via the Program Manager by double clicking on the Main\Control Panel\Post.Office icons in the order indicated. When the Post.Office applet window appears look at the entries at the bottom of the window. Or, if you are running 3.0, in the Licensing and Configuration Web Page.
+Start Post.Office using Control Panel -> Services -> Post.Office MTA -> Start or from the command line "net start post.office"
+</code></pre>
+</div>
+</div>
+<p>All Versions – UNIX Only – How do I do a standard, full system backup of Post.Office? Safe software practices dictate that you back up your mail server on a regular basis. Follow the steps outlined below to back up the current version of Post.Office. Note: Instructions on restoring your system from the backup files are provided in the Restoring Post.Office section of the FAQ, which follows. Solaris Backup Instructions: These instructions presume that you have installed Post.Office in the default locations which are /opt/post.office (program executables) and /var/spool/post.office (the spooling directories). If you selected other locations you will need to adjust the instructions accordingly. To determine the current locations of your Post.Office Spooling, Program, and Mailbox directories list the contents of the /etc/post.office.conf file.</p>
+<div class="highlighter-rouge">
+<div class="highlight">
+<pre class="highlight"><code>Log on as root.
+Shutdown Post.Office by typing: /opt/post.office/post.office shutdown
+Back up the following items making sure to maintain permissions and links:
+
+/var/spool/post.office (the "account" and configuration information)
+/var/spool/mailbox (the mailbox information)
+/etc/post.office.conf (your configuration file)
+</code></pre>
+</div>
+</div>
+<p>Backup Instructions for All Other UNIX Platforms These instructions presume that you installed Post.Office in the default locations which are /usr/local/post.office (program executables) and /var/spool/post.office (the spooling directories). If you selected other locations you will need to adjust the instructions accordingly. To determine the current locations of your Post.Office Spooling, Program, and Mailbox directories list the contents of the /etc/post.office.conf file.</p>
+<div class="highlighter-rouge">
+<div class="highlight">
+<pre class="highlight"><code>Log on as root.
+Shutdown Post.Office by typing: /usr/local/post.office/post.office shutdown
+Back up the following items making sure to maintain permissions and links:
+
+/usr/local/post.office (the Post.Office executables)
+/var/spool/post.office (the "account" and configuration information)
+/var/spool/mailbox (the mailbox information)
+/etc/post.office.conf (your configuration file)</code></pre>
+</div>
+</div>
+					<div class="clear"></div>
+				</div>
+				
+			</article></div>
+
+</div>
+
+
+	<div class="sidebar s1">
+		
+		<div class="sidebar-content">
+			
+						
+						
+			<div id="pages-2" class="widget widget_pages"><h3 class="group"><span>Pages</span></h3>		<ul><li class="page_item page-item-37"><a href="https://ironsummitmedia.github.io/home/">Home</a></li>
+<li class="page_item page-item-9"><a href="https://ironsummitmedia.github.io/startbootstrap-agency/">Startbootstrap Agency</a></li>
+<li class="page_item page-item-35"><a href="https://ironsummitmedia.github.io/startbootstrap-agency-2/">Startbootstrap Agency</a></li>
+<li class="page_item page-item-27"><a href="https://ironsummitmedia.github.io/startbootstrap-creative/">Startbootstrap Creative</a></li>
+<li class="page_item page-item-33"><a href="https://ironsummitmedia.github.io/startbootstrap-freelancer/">Startbootstrap Freelancer</a></li>
+<li class="page_item page-item-29 current_page_item"><a href="https://ironsummitmedia.github.io/startbootstrap-landing-page/">Startbootstrap Landing Page</a></li>
+<li class="page_item page-item-25"><a href="https://ironsummitmedia.github.io/startbootstrap-sb-admin/">Startbootstrap SB Admin</a></li>
+<li class="page_item page-item-31"><a href="https://ironsummitmedia.github.io/startbootstrap-sbadmin-2/">Startbootstrap SBAdmin 2</a></li>
+		</ul></div>			
+		</div>
+		
+	</div>
+	
+
+				</div>
+				
+				<footer id="footer"><div id="footer-bottom">
+						
+						<a id="back-to-top" href="#"><i class="fa fa-angle-up"></i></a>
+							
+						<div class="pad group">
+							
+							<div class="grid one-half">
+								
+																
+						
+								
+							</div>
+							
+							<div class="grid one-half last">	
+																																</div>
+						
+						</div>
+
+					</div>
+
+				</footer></div>	
+		</div>
+	</div>
+
+</div>
+
+<script type="text/javascript" src="https://ironsummitmedia.github.io/wp-content/themes/boxstyle/js/jquery.fitvids.js"></script><script type="text/javascript" src="https://ironsummitmedia.github.io/wp-content/themes/boxstyle/js/owl.carousel.min.js"></script><script type="text/javascript" src="https://ironsummitmedia.github.io/wp-content/themes/boxstyle/js/jq-sticky-anything.min.js"></script><script type="text/javascript" src="https://ironsummitmedia.github.io/wp-content/themes/boxstyle/js/scripts.js"></script></body></html>
