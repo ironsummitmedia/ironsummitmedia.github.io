@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Startbootstrap Grayscale – Github</title><script>document.documentElement.className = document.documentElement.className.replace("no-js","js");</script><link rel="dns-prefetch" href="//fonts.googleapis.com"><link rel="dns-prefetch" href="//s.w.org"><link rel="stylesheet" id="boxstyle-style-css" href="https://ironsummitmedia.github.io/wp-content/themes/boxstyle/style.css" type="text/css" media="all"><style id="boxstyle-style-inline-css" type="text/css">
+body { font-family: "Roboto", Arial, sans-serif; }
+
+img,
+.alx-tab img, 
+.alx-posts img,
+#profile-image img,
+.post-list .post-thumbnail img,
+.post-format,
+.post-thumbnail img,
+#flexslider-featured.featured .post-inner { -webkit-border-radius: px; border-radius: px; }
+#flexslider-featured.featured .post-title { border-radius: 0 0 px px; }
+				
+
+</style><link rel="stylesheet" id="boxstyle-responsive-css" href="https://ironsummitmedia.github.io/wp-content/themes/boxstyle/responsive.css" type="text/css" media="all"><link rel="stylesheet" id="boxstyle-font-awesome-css" href="https://ironsummitmedia.github.io/wp-content/themes/boxstyle/fonts/font-awesome.min.css" type="text/css" media="all"><link rel="stylesheet" id="roboto-css" href="//fonts.googleapis.com/css?family=Roboto%3A400%2C300italic%2C300%2C400italic%2C700&subset=latin%2Clatin-ext&ver=4.9.9" type="text/css" media="all"><script type="text/javascript" src="https://ironsummitmedia.github.io/wp-includes/js/jquery/jquery.js"></script><script type="text/javascript" src="https://ironsummitmedia.github.io/wp-includes/js/jquery/jquery-migrate.min.js"></script><script type="text/javascript" src="https://ironsummitmedia.github.io/wp-content/themes/boxstyle/js/jquery.flexslider.min.js"></script></head><body class="page-template-default page page-id-50 col-2cr full-width logged-out">
+
+<div id="wrapper">
+
+	<div class="container" id="page">
+		<div class="container-inner">			
+			<div class="main">
+			
+				<header id="header"><div class="group">
+						
+													<div class="group pad">
+								<p class="site-title"><a href="https://ironsummitmedia.github.io/" rel="home">Github</a></p>
+																	<p class="site-description">ironsummitmedia</p>
+															</div>
+												
+						
+					</div>
+					
+										
+					<div id="header-sticky">
+											</div>
+				
+				</header><div class="sidebar s2">
+																				</div>
+				<div class="clear"></div>
+
+								
+				<div class="main-inner group">
+
+<div class="content">
+	
+	<div class="page-title group">
+	<div class="pad group">
+
+			<h2>Startbootstrap Grayscale</h2>
+
+			
+	</div>
+</div>	
+	<div class="pad group">
+		
+				
+			<article class="group post-50 page type-page status-publish hentry"><div class="entry themeform">
+					<p><strong>1.9.3, 2.0, 3.0 Only – UNIX Only – What should I do if I was unable to upgrade </strong><strong>successfully to version 3.0 and I don’t have a standard, full system backup, just the </strong><strong>backup made during the upgrade?</strong></p>
+<p>You should have made a complete backup of your Post.Office system before upgrading (as instructed in the README.TXT and RELNOTES.TXT files). If you did not make a standard, full system backup as instructed, you will need to rely on the partial backup which was made during the upgrade.</p>
+<p>Please be aware, however, that your mailbox directories and the executable directory were <em>not</em> included in the partial backup. We are performing mailbox conversions during this upgrade and the half-converted directory can not be used. Part of these instructions will be to run a utility that will take your converted mailbox directories and files and restore them to the prior versions structure. The half-converted executable directory also cannot be used; it should be replaced with your prior version of the executables which can be downloaded directly from our ftp site.</p>
+<p>After your system is restored and working, please contact for assistance with the 3.0 upgrade.</p>
+<p><strong>Restoration Instructions for Solaris</strong><strong>:</strong></p>
+<p>To restore your system with your prior version of Post.Office, you will need to:</p>
+<ol><li>Shutdown Post.Office<br>
+</opt>/Post.Office shutdown</li>
+<li>For safety’s sake please copy the existing, partially modified versions of the mailbox directories and the executables directory to another location before attempting restoration.<br>
+-r /opt/post.office /tmp/POexecBad3.0<br>
+-r /var/spool/mailbox /tmp/POmailboxBad3.0<br>
+-r /var/spool/post.office /tmp/POspoolBad3.0</li>
+<li>Remove the 3.0 executables with by typing: pkgrm SCOM-MTA</li>
+<li>Copy the half upgraded versions of your account files. Then replace the half upgraded version of your MTA-Accounts file with the backup of the file made during upgrade. If you attempted to run the upgrade more that once, make sure to restore the “first” backup made so that you restore the working prior version of your MTA-Accounts database file:cd </var/spool/>Post.Office/configcp MTA-Accounts MTA-Accounts.bad3.0<br>
+cp BTAccounts.i BTAccounts.i.bad3.0<br>
+cp BTAccounts.a BTAccounts.a.bad3.0<br>
+cp MTA-Accounts.backup.yymmddhhmm MTA-Accounts
+<p><em>Note: You might run into ownership or permission problems if you didn’t back up or </em><em>restore with the original permissions. It’s possible that executing a </em><em>chown</em><em> on the copied </em><em>files and assigning ownership to your post.office user (mta) will be enough. (The</em><em>standard permissions for UNIX are listed elsewhere in this FAQ for your review.)</em></p></li>
+<li>Copy the half upgraded versions of your configuration files. Then replace the half upgraded version of your configuration files with the backup of the files made during the upgrade. You might have old ones there that you DON”T want to use, so only use the *.backup files with today’s date:cd </var/spool/>Post.Office/configFor each *.backup file with <em>today’s</em> date and time:
+<p>cp <ServerModuleName> <ServerModuleName>.bad3.0<br>
+cp <ServerModuleName>.backup <ServerModuleName></p>
+<p><em>Note: You might run into ownership or permission problems if you didn’t back up or </em><em>restore with the original permissions. It’s possible that executing a </em><em>chown</em><em> on the copied </em><em>files and assigning ownership to your post.office user (mta) will be enough. (The</em><em>standard permissions for UNIX are listed elsewhere in this FAQ for your review.)</em></p></li>
+<li>We have written a perl script to help convert your mailbox directories from the new 3.0 structure to the old structure. (Note: You can download perl from the ftp site ntperl.hip.com.) Download from our ftp site a utility called unbucket.pl and run it using the following instructions:
+<ul><li>Type: ftp ftp.software.com</li>
+<li>Log in as anonymous.</li>
+<li>Use your e-mail address as the password.</li>
+<li>Change directory to the location of the utility by typing<br>
+cd ftp\postoffice\archive\<version no.>\unix\<yourplatform>\utilities\</li>
+<li>Download the executables in binary mode by typing:<br>
+bin<br>
+get unbucket.pl</li>
+<li>Move the unbucket.pl utility to your mailbox directory.</li>
+<li>Run the command by typing the following:<br>
+cd winnt\system32\spool\post.office\mailbox<br>
+perl unbucket.pl</li>
+<li>The bucketed mailboxes will be copied back up to the unbucketed structure.</li>
+</ul></li>
+<li>Download your prior version of Post.Office for Solaris (1.9.3 or 2.0) from our web site to a temporary directory.</li>
+<li>Uncompress the file you downloaded and expand the resulting archive file to create the Post.Office package (SCOM-MTA) by typing:cd /var/tmp/PO<version><br>
+uncompress <packagename>.tar.Z<br>
+tar xvpf <packagename>.tar</li>
+<li>From the location in which you stored it, install the package by typing:<br>
+pkgadd -d . SCOM-MTA<strong>Caution:</strong> The upgrade program will ask if you wish to change configuration information. You should answer “no”.</li>
+<li>If you are currently using Program Delivery, you may need to re-enable that feature by typing:<br>
+chmod u+s /opt/post.office/local/Program-Deliver<br>
+rm /opt/post.office/trusted/NO-PROGRAM-DELIVERIES</li>
+<li>Run the Post.Office configuration program:<br>
+1.9.3: /opt/post.office/Install<br>
+2.0: /opt/post.office/Setup</li>
+</ol><div class="clear"></div>
+				</div>
+				
+			</article></div>
+
+</div>
+
+
+	<div class="sidebar s1">
+		
+		<div class="sidebar-content">
+			
+						
+						
+			<div id="pages-2" class="widget widget_pages"><h3 class="group"><span>Pages</span></h3>		<ul><li class="page_item page-item-37"><a href="https://ironsummitmedia.github.io/home/">Home</a></li>
+<li class="page_item page-item-9"><a href="https://ironsummitmedia.github.io/startbootstrap-agency/">Startbootstrap Agency</a></li>
+<li class="page_item page-item-35"><a href="https://ironsummitmedia.github.io/startbootstrap-agency-2/">Startbootstrap Agency</a></li>
+<li class="page_item page-item-40"><a href="https://ironsummitmedia.github.io/startbootstrap-business-casual/">Startbootstrap business casual</a></li>
+<li class="page_item page-item-27"><a href="https://ironsummitmedia.github.io/startbootstrap-creative/">Startbootstrap Creative</a></li>
+<li class="page_item page-item-33"><a href="https://ironsummitmedia.github.io/startbootstrap-freelancer/">Startbootstrap Freelancer</a></li>
+<li class="page_item page-item-50 current_page_item"><a href="https://ironsummitmedia.github.io/startbootstrap-grayscale/">Startbootstrap Grayscale</a></li>
+<li class="page_item page-item-29"><a href="https://ironsummitmedia.github.io/startbootstrap-landing-page/">Startbootstrap Landing Page</a></li>
+<li class="page_item page-item-44"><a href="https://ironsummitmedia.github.io/startbootstrap-modern-business/">Startbootstrap Modern Business</a></li>
+<li class="page_item page-item-25"><a href="https://ironsummitmedia.github.io/startbootstrap-sb-admin/">Startbootstrap SB Admin</a></li>
+<li class="page_item page-item-31"><a href="https://ironsummitmedia.github.io/startbootstrap-sbadmin-2/">Startbootstrap SBAdmin 2</a></li>
+<li class="page_item page-item-48"><a href="https://ironsummitmedia.github.io/startbootstrap-scrolling-nav/">Startbootstrap Scrolling Nav</a></li>
+<li class="page_item page-item-46"><a href="https://ironsummitmedia.github.io/startbootstrap-simple-sidebar/">Startbootstrap Simple Sidebar</a></li>
+<li class="page_item page-item-42"><a href="https://ironsummitmedia.github.io/startbootstrap-stylish-portfolio/">Startbootstrap stylish portfolio</a></li>
+		</ul></div>			
+		</div>
+		
+	</div>
+	
+
+				</div>
+				
+				<footer id="footer"><div id="footer-bottom">
+						
+						<a id="back-to-top" href="#"><i class="fa fa-angle-up"></i></a>
+							
+						<div class="pad group">
+							
+							<div class="grid one-half">
+								
+																
+						
+								
+							</div>
+							
+							<div class="grid one-half last">	
+																																</div>
+						
+						</div>
+
+					</div>
+
+				</footer></div>	
+		</div>
+	</div>
+
+</div>
+
+<script type="text/javascript" src="https://ironsummitmedia.github.io/wp-content/themes/boxstyle/js/jquery.fitvids.js"></script><script type="text/javascript" src="https://ironsummitmedia.github.io/wp-content/themes/boxstyle/js/owl.carousel.min.js"></script><script type="text/javascript" src="https://ironsummitmedia.github.io/wp-content/themes/boxstyle/js/jq-sticky-anything.min.js"></script><script type="text/javascript" src="https://ironsummitmedia.github.io/wp-content/themes/boxstyle/js/scripts.js"></script></body></html>

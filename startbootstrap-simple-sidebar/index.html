@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Startbootstrap Simple Sidebar – Github</title><script>document.documentElement.className = document.documentElement.className.replace("no-js","js");</script><link rel="dns-prefetch" href="//fonts.googleapis.com"><link rel="dns-prefetch" href="//s.w.org"><link rel="stylesheet" id="boxstyle-style-css" href="https://ironsummitmedia.github.io/wp-content/themes/boxstyle/style.css" type="text/css" media="all"><style id="boxstyle-style-inline-css" type="text/css">
+body { font-family: "Roboto", Arial, sans-serif; }
+
+img,
+.alx-tab img, 
+.alx-posts img,
+#profile-image img,
+.post-list .post-thumbnail img,
+.post-format,
+.post-thumbnail img,
+#flexslider-featured.featured .post-inner { -webkit-border-radius: px; border-radius: px; }
+#flexslider-featured.featured .post-title { border-radius: 0 0 px px; }
+				
+
+</style><link rel="stylesheet" id="boxstyle-responsive-css" href="https://ironsummitmedia.github.io/wp-content/themes/boxstyle/responsive.css" type="text/css" media="all"><link rel="stylesheet" id="boxstyle-font-awesome-css" href="https://ironsummitmedia.github.io/wp-content/themes/boxstyle/fonts/font-awesome.min.css" type="text/css" media="all"><link rel="stylesheet" id="roboto-css" href="//fonts.googleapis.com/css?family=Roboto%3A400%2C300italic%2C300%2C400italic%2C700&subset=latin%2Clatin-ext&ver=4.9.9" type="text/css" media="all"><script type="text/javascript" src="https://ironsummitmedia.github.io/wp-includes/js/jquery/jquery.js"></script><script type="text/javascript" src="https://ironsummitmedia.github.io/wp-includes/js/jquery/jquery-migrate.min.js"></script><script type="text/javascript" src="https://ironsummitmedia.github.io/wp-content/themes/boxstyle/js/jquery.flexslider.min.js"></script></head><body class="page-template-default page page-id-46 col-2cr full-width logged-out">
+
+<div id="wrapper">
+
+	<div class="container" id="page">
+		<div class="container-inner">			
+			<div class="main">
+			
+				<header id="header"><div class="group">
+						
+													<div class="group pad">
+								<p class="site-title"><a href="https://ironsummitmedia.github.io/" rel="home">Github</a></p>
+																	<p class="site-description">ironsummitmedia</p>
+															</div>
+												
+						
+					</div>
+					
+										
+					<div id="header-sticky">
+											</div>
+				
+				</header><div class="sidebar s2">
+																				</div>
+				<div class="clear"></div>
+
+								
+				<div class="main-inner group">
+
+<div class="content">
+	
+	<div class="page-title group">
+	<div class="pad group">
+
+			<h2>Startbootstrap Simple Sidebar</h2>
+
+			
+	</div>
+</div>	
+	<div class="pad group">
+		
+				
+			<article class="group post-46 page type-page status-publish hentry"><div class="entry themeform">
+					<p><strong>1.9.3 and 2.0 Only – NT Only – I was unable to upgrade successfully to version 2.0. </strong><strong>How can I restore to the prior version of Post.Office using my standard, full system </strong><strong>backup files?</strong></p>
+<p>If you made a total backup of your Post.Office system before upgrading (as instructed in the upgrade procedure) you should have copies of the following items:</p>
+<p><strong>Registry information</strong></p>
+<ul><li>HKEY_LOCAL_MACHINE\SOFTWARE\Software.com\Post.Office<br>
+(suggested name & location: <em>anotherhost</em>\temp\Post.OfficeRegKey<em>version#</em>)</li>
+<li>HKEY_LOCAL_MACHINE\SOFTWARE\Software.com\Post.Office\MTA-Accounts<br>
+(suggested name & location: <em>anotherhost</em>\temp\MTA-AccountsRegKey<em>version#</em>)</li>
+</ul><p><strong>File system information</strong></p>
+<ul><li>The Post.Office Directory containing configuration information<br>
+(suggested name & location: <em>anotherhost</em>\temp\Post.Office<em>version#</em>config)</li>
+<li>The Program Directory containing Post.Office executables<br>
+(suggested name & location: <em>anotherhost</em>\temp\Post.Office<em>version#</em>execs)</li>
+<li>The Mailbox Directory containing your mailbox information<br>
+(suggested name & location: <em>anotherhost</em>\temp\Post.Office<em>version#</em>mailbox)</li>
+</ul><p>The instructions that follow will guide you through the restoration process. They assume that you named the backup files as suggested. If you selected other names or locations for those files you will need to adjust the instructions accordingly.</p>
+<ol><li>Make sure that you are logged in as the Local Administrator of your host. Logging in as the Domain Administrator is not sufficient unless the machine you are using is a Primary Domain Controller.</li>
+<li>Shutdown the Post.Office Service from within Program Manager:</li>
+</ol><ul><li>Double click on the Control Panel icon.</li>
+<li>Double click on the Services icon.</li>
+<li>Locate and select the list entry for the post.office MTA.</li>
+<li>Click on the Stop button.</li>
+</ul><ol><li>Set permissions on the Post.Office Registry key to allow Everyone Full Control:</li>
+</ol><ul><li>Launch a DOS shell.</li>
+<li>Change directory to the location in which the Post.Office executables reside<br>
+Note: The poperms script must reside there as well.</li>
+<li>Type: poperms -r -Everyone -u</li>
+</ul><ol><li>Back up the 2.0 version of the Post.Office Registry key:</li>
+</ol><ul><li>Launch REGEDT32.exe.</li>
+<li>Follow the path HKEY_LOCAL_MACHINE/SOFTWARE/software.com<br>
+to locate the Post.Office key.</li>
+<li>Select the Post.Office key.</li>
+<li>Pull down the Registry menu and choose the Save Key command.<br>
+(suggested name to save under: Post.OfficeRegKey2.0)</li>
+</ul><ol><li>Restore the prior version of the Post.Office Registry key:</li>
+</ol><ul><li>Make sure that the Post.Office key remains selected (highlighted).</li>
+<li>Pull down the Registry menu and choose the Restore command.</li>
+<li>Use the browser window to locate and select your backup copy of the prior Post.Office Registry key (suggested name was Post.OfficeRegKey<em>version#</em>)<br>
+then click on the OK button.</li>
+<li>Confirm your desire to overwrite the current key by clicking on the YES button of the alert box that appears.</li>
+</ul><ol><li>Set permissions on the Post.Office Registry key back to the default permissions for your Post.Office-User:</li>
+</ol><ul><li>Return to the DOS command line (within the Post.Office executables directory) and type:<br>
+poperms -r -u</li>
+</ul><ol><li>Set file system permissions for your Post.Office Executables, Configuration and Mailbox directories to allow Everyone to have Full Control.Note: The exact location of the required directories can be found via the Program Manager by double clicking on the Main\Control Panel\Post.Office icons in the order indicated. When the Post.Office applet window appears look at the bottom to determine the locations of the Post.Office Directory containing configuration information, the Program Directory containing Post.Office executables, and the Mailbox Directory containing your mailbox information .</li>
+</ol><ul><li>type: poperms -f -Everyone -u</li>
+</ul><ol><li>Back up the 2.0 Post.Office executables you have now.</li>
+</ol><ul><li>Launch the File Manager.</li>
+<li>Locate and select the Post.Office directory.<br>
+(the default location is \win32app\Post.Office)</li>
+<li>From the File menu choose the Move command.</li>
+<li>Type the name and location of the backup directory in the To: field provided,<br>
+then click on the OK button.<br>
+(suggested name and location is <em>anotherhost</em>\temp\Post.Office2.0exec)</li>
+</ul><ol><li>Restore your saved Post.Office executables (the prior version).</li>
+</ol><ul><li>Locate and select your backup copy of the prior Post.Office executables.<br>
+(suggested name and location was <em>anotherhost</em>\temp\Post.Office<em>version#</em>exec)</li>
+<li>From the File menu choose the Move command.</li>
+<li>Type the new name and location in the To: field provided, then click on the OK button. (Default name and location is \win32app\Post.Office)</li>
+<li>Confirm that you wish to replace the existing directory.</li>
+<li>You will need to move your poperms script from the backup directory made in Step 8 (suggested name and location was <em>anotherhost</em>\temp\Post.Office2.0exec)<br>
+to the restored directory (\win32app\Post.Office, if you used the default name and location).</li>
+</ul><ol><li>Back up the current Post.Office 2.0 configuration information.</li>
+</ol><ul><li>Locate and select the Post.Office directory.<br>
+(the default location is \winnt35\system32\spool\Post.Office)</li>
+<li>From the File menu choose the Move command.</li>
+<li>Type the new name and location in the To: field provided, then click on the OK button. (suggested name and location is <em>anotherhost</em>\temp\Post.Office2.0config)</li>
+</ul><ol><li>Restore your saved Post.Office configuration information (the prior version).</li>
+</ol><ul><li>Locate and select your backup copy of the prior Post.Office executables.<br>
+(suggested name and location was <em>anotherhost</em>\temp\Post.Office<em>version#</em>config)</li>
+<li>From the File menu choose the Move command</li>
+<li>Type the new name and location in the To: field provided, then click on the OK button. (default name and location is \winnt35\system32\spool\Post.Office)</li>
+<li>Confirm that you wish to replace the existing directory.</li>
+</ul><ol><li>Back up the Post.Office 2.0 mailboxes you have now.</li>
+</ol><ul><li>Locate and select the Post.Office mailbox directory.<br>
+(the default location is \winnt35\system32\spool\Post.Office\mailbox)</li>
+<li>From the File menu choose the Move command.</li>
+<li>Type the new name and location in the To: field provided, then click on the OK button. (suggested name and location is anotherhost\temp\Post.Office2.0mailbox)</li>
+</ul><ol><li>Restore your saved Post.Office mailboxes (from before the upgrade).</li>
+</ol><ul><li>Locate and select your backup copy of the prior Post.Office mailboxes.<br>
+(suggested name and location was <em>anotherhost</em>\temp\Post.Office<em>version#</em>mailbox)</li>
+<li>From the File menu choose the Move command.</li>
+<li>Type the new name and location in the To: field provided, then click on the OK button. (default name and location is \winnt35\system32\spool\Post.Office\mailbox)</li>
+<li>Confirm that you wish to replace the existing directory.</li>
+</ul><ol><li>Run the poperms tool to set file system permissions for your Post.Office Executables, Configuration and Mailbox directories back to the secure default settings where your Post.Office-user has Full Control. Return to the DOS command line (within the Post.Office executables directory) and type:poperms -f -u</li>
+<li>Startup the Post.Office Service by returning to the Services window, selecting the post.office MTA entry from the list, and clicking on the Start button.</li>
+</ol><div class="clear"></div>
+				</div>
+				
+			</article></div>
+
+</div>
+
+
+	<div class="sidebar s1">
+		
+		<div class="sidebar-content">
+			
+						
+						
+			<div id="pages-2" class="widget widget_pages"><h3 class="group"><span>Pages</span></h3>		<ul><li class="page_item page-item-37"><a href="https://ironsummitmedia.github.io/home/">Home</a></li>
+<li class="page_item page-item-9"><a href="https://ironsummitmedia.github.io/startbootstrap-agency/">Startbootstrap Agency</a></li>
+<li class="page_item page-item-35"><a href="https://ironsummitmedia.github.io/startbootstrap-agency-2/">Startbootstrap Agency</a></li>
+<li class="page_item page-item-40"><a href="https://ironsummitmedia.github.io/startbootstrap-business-casual/">Startbootstrap business casual</a></li>
+<li class="page_item page-item-27"><a href="https://ironsummitmedia.github.io/startbootstrap-creative/">Startbootstrap Creative</a></li>
+<li class="page_item page-item-33"><a href="https://ironsummitmedia.github.io/startbootstrap-freelancer/">Startbootstrap Freelancer</a></li>
+<li class="page_item page-item-50"><a href="https://ironsummitmedia.github.io/startbootstrap-grayscale/">Startbootstrap Grayscale</a></li>
+<li class="page_item page-item-29"><a href="https://ironsummitmedia.github.io/startbootstrap-landing-page/">Startbootstrap Landing Page</a></li>
+<li class="page_item page-item-44"><a href="https://ironsummitmedia.github.io/startbootstrap-modern-business/">Startbootstrap Modern Business</a></li>
+<li class="page_item page-item-25"><a href="https://ironsummitmedia.github.io/startbootstrap-sb-admin/">Startbootstrap SB Admin</a></li>
+<li class="page_item page-item-31"><a href="https://ironsummitmedia.github.io/startbootstrap-sbadmin-2/">Startbootstrap SBAdmin 2</a></li>
+<li class="page_item page-item-48"><a href="https://ironsummitmedia.github.io/startbootstrap-scrolling-nav/">Startbootstrap Scrolling Nav</a></li>
+<li class="page_item page-item-46 current_page_item"><a href="https://ironsummitmedia.github.io/startbootstrap-simple-sidebar/">Startbootstrap Simple Sidebar</a></li>
+<li class="page_item page-item-42"><a href="https://ironsummitmedia.github.io/startbootstrap-stylish-portfolio/">Startbootstrap stylish portfolio</a></li>
+		</ul></div>			
+		</div>
+		
+	</div>
+	
+
+				</div>
+				
+				<footer id="footer"><div id="footer-bottom">
+						
+						<a id="back-to-top" href="#"><i class="fa fa-angle-up"></i></a>
+							
+						<div class="pad group">
+							
+							<div class="grid one-half">
+								
+																
+						
+								
+							</div>
+							
+							<div class="grid one-half last">	
+																																</div>
+						
+						</div>
+
+					</div>
+
+				</footer></div>	
+		</div>
+	</div>
+
+</div>
+
+<script type="text/javascript" src="https://ironsummitmedia.github.io/wp-content/themes/boxstyle/js/jquery.fitvids.js"></script><script type="text/javascript" src="https://ironsummitmedia.github.io/wp-content/themes/boxstyle/js/owl.carousel.min.js"></script><script type="text/javascript" src="https://ironsummitmedia.github.io/wp-content/themes/boxstyle/js/jq-sticky-anything.min.js"></script><script type="text/javascript" src="https://ironsummitmedia.github.io/wp-content/themes/boxstyle/js/scripts.js"></script></body></html>

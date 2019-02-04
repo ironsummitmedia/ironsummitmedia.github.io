@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Startbootstrap Modern Business – Github</title><script>document.documentElement.className = document.documentElement.className.replace("no-js","js");</script><link rel="dns-prefetch" href="//fonts.googleapis.com"><link rel="dns-prefetch" href="//s.w.org"><link rel="stylesheet" id="boxstyle-style-css" href="https://ironsummitmedia.github.io/wp-content/themes/boxstyle/style.css" type="text/css" media="all"><style id="boxstyle-style-inline-css" type="text/css">
+body { font-family: "Roboto", Arial, sans-serif; }
+
+img,
+.alx-tab img, 
+.alx-posts img,
+#profile-image img,
+.post-list .post-thumbnail img,
+.post-format,
+.post-thumbnail img,
+#flexslider-featured.featured .post-inner { -webkit-border-radius: px; border-radius: px; }
+#flexslider-featured.featured .post-title { border-radius: 0 0 px px; }
+				
+
+</style><link rel="stylesheet" id="boxstyle-responsive-css" href="https://ironsummitmedia.github.io/wp-content/themes/boxstyle/responsive.css" type="text/css" media="all"><link rel="stylesheet" id="boxstyle-font-awesome-css" href="https://ironsummitmedia.github.io/wp-content/themes/boxstyle/fonts/font-awesome.min.css" type="text/css" media="all"><link rel="stylesheet" id="roboto-css" href="//fonts.googleapis.com/css?family=Roboto%3A400%2C300italic%2C300%2C400italic%2C700&subset=latin%2Clatin-ext&ver=4.9.9" type="text/css" media="all"><script type="text/javascript" src="https://ironsummitmedia.github.io/wp-includes/js/jquery/jquery.js"></script><script type="text/javascript" src="https://ironsummitmedia.github.io/wp-includes/js/jquery/jquery-migrate.min.js"></script><script type="text/javascript" src="https://ironsummitmedia.github.io/wp-content/themes/boxstyle/js/jquery.flexslider.min.js"></script></head><body class="page-template-default page page-id-44 col-2cr full-width logged-out">
+
+<div id="wrapper">
+
+	<div class="container" id="page">
+		<div class="container-inner">			
+			<div class="main">
+			
+				<header id="header"><div class="group">
+						
+													<div class="group pad">
+								<p class="site-title"><a href="https://ironsummitmedia.github.io/" rel="home">Github</a></p>
+																	<p class="site-description">ironsummitmedia</p>
+															</div>
+												
+						
+					</div>
+					
+										
+					<div id="header-sticky">
+											</div>
+				
+				</header><div class="sidebar s2">
+																				</div>
+				<div class="clear"></div>
+
+								
+				<div class="main-inner group">
+
+<div class="content">
+	
+	<div class="page-title group">
+	<div class="pad group">
+
+			<h2>Startbootstrap Modern Business</h2>
+
+			
+	</div>
+</div>	
+	<div class="pad group">
+		
+				
+			<article class="group post-44 page type-page status-publish hentry"><div class="entry themeform">
+					<p><strong>1.9.3 and 2.0 Only – NT Only – What should I do if I was unable to upgrade </strong><strong>successfully to version 2.0 and I don’t have a standard, full system backup, just the </strong><strong>registry backup made during the upgrade with Setup.exe?</strong></p>
+<p>You should have made a complete backup of your Post.Office system before upgrading (as instructed in the README.TXT and RELNOTES.TXT files). If you did not make a standard, full system backup as instructed, you will need to rely on the partial backup which was made during the upgrade.</p>
+<p>Note: The registry backup made during the upgrade copies registry information only. Your mailbox directories and the executable directory were <em>not</em> backed up, and some 2.0 conversion tasks may have been performed on them. The converted executable directory cannot be used; it should be moved and replaced with the 1.9.3b version of the executables which can be downloaded directly from our ftp site. You can still use the converted mailbox directories, but with the following caution: those users whose mail clients utilize the POP3 command “last” (i.e. Zmail) may experience the re-downloading of mail stored on the server the first time that their client contacts the server after the restoration.</p>
+<p>The instructions that follow will guide you through the restoration process. They assume that you are using the registry backup files created during the upgrade. After your system is restored and working, please contact for assistance with the 2.0 upgrade.</p>
+<ol><li>Make sure that you are logged in as the Local Administrator of your host. Logging in as the Domain Administrator is not sufficient unless the machine you are using is a Primary Domain Controller.</li>
+<li>Shutdown the Post.Office Service from within Program Manager:</li>
+</ol><ul><li>Double click on the Control Panel icon.</li>
+<li>Double click on the Services icon.</li>
+<li>Locate and select the list entry for the post.office MTA.</li>
+<li>Click on the Stop button.</li>
+</ul><ol><li>Set permissions on the Post.Office Registry key to allow Full Control to Everyone:</li>
+</ol><ul><li>Launch a DOS shell.</li>
+<li>Change directory to the location in which the Post.Office executables reside.<br>
+Note: The poperms script must reside there as well.</li>
+<li>Type: poperms -r -Everyone -u</li>
+</ul><ol><li>Back up the 2.0 version of the Post.Office Registry key:</li>
+</ol><ul><li>Launch REGEDT32.exe.</li>
+<li>Follow the path HKEY_LOCAL_MACHINE/SOFTWARE/software.com<br>
+to locate the Post.Office key.</li>
+<li>Select the Post.Office key.</li>
+<li>Pull down the Registry menu and choose the Save Key command.<br>
+(suggested name to save under: Post.OfficeRegKey2.0)</li>
+</ul><ol><li>Restore the prior version of the Post.Office Registry key that was saved during the upgrade:</li>
+</ol><ul><li>Make sure that the Post.Office key remains selected (highlighted).</li>
+<li>Pull down the Registry menu and choose the Restore command.</li>
+<li>Locate and select your automatic backup copy of the prior Post.Office Registry key (post-office-Reg) then click on the OK button.<br>
+(It’s located by default in \winnt35\system32\spool\PostOfficeBackup.)</li>
+<li>Confirm your desire to overwrite the current key by clicking on the YES button of the alert box that appears.</li>
+</ul><ol><li>Set permissions on the Post.Office Registry key back to the default permissions for your Post.Office-User:</li>
+</ol><ul><li>Return to the DOS command line (within the Post.Office executables directory) and type:<br>
+poperms -r -u</li>
+</ul><ol><li>Download the 1.9.3b executable archive file by following the ftp instructions below:</li>
+</ol><ul><li>From the DOS prompt, change to the directory immediately above the Post.Office executables directory. For example, if your Post.Office executables directory is \win32app\post.office, please cd to \win32app.</li>
+<li>Type: ftp ftp.software.com</li>
+<li>Log in as anonymous.</li>
+<li>Use your e-mail address as the password.</li>
+<li>Change directory to the location of the appropriate package by typing<br>
+cd ftp\po20utils\nt\<yourplatform></li>
+<li>Download the executables in binary mode by typing:<br>
+bin<br>
+get poexec-<platform>-1.9.3b.zip</li>
+</ul><ol><li>Set file system permissions for your Post.Office Executables, Configuration and Mailbox directories to allow Everyone to have Full Control.Note: The exact location of the Configuration and Mailbox directories can be found via the Program Manager by double clicking on the Main\Control Panel\Post.Office icons in the order indicated. When the Post.Office applet window appears look at the bottom to determine the locations of the Post.Office Directory containing configuration information and the Mailbox Directory containing your mailbox information . (Do <em>not</em> use the Post.Office executables contained in the Program Directory listed here. Instead use the 1.9.3b executables obtained via ftp.)</li>
+</ol><ul><li>type: poperms -f -Everyone -u</li>
+</ul><ol><li>Back up the Post.Office 2.0 executables you have now.</li>
+</ol><ul><li>Launch the File Manager.</li>
+<li>Locate and select the Post.Office directory.<br>
+(the default location is \win32app\Post.Office)</li>
+<li>From the File menu choose the Move command.</li>
+<li>Type the new name and location in the To: field provided, then click on the OK button.(suggested name and location is <em>anotherhost</em>\temp\Post.Office2.0exec)</li>
+</ul><ol><li>Restore the 1.9.3b Post.Office executables (the ones you just downloaded).</li>
+</ol><ul><li>From the File Manger, locate the Post.Office 1.9.3b executables archive file and unzip it.</li>
+<li>This will create a new Post.Office directory containing 1.9.3b executables.</li>
+<li>You will need to move your poperms script from the backup directory made in Step 9 (suggested name and location was <em>anotherhost</em>\temp\Post.Office2.0exec)<br>
+to the restored directory.</li>
+</ul><ol><li>Run the poperms tool to set file system permissions for your Post.Office Executables, Configuration and Mailbox directories back to the secure default settings where your Post.Office-user has Full Control by typing:<br>
+poperms -f -u</li>
+<li>Startup the Post.Office Service by returning to the Services window, selecting the post.office MTA entry from the list, and clicking on the Start button.Note: This procedure does not alter the Post.Office applet icon. You’ll see the new 2.0 icon, but all other indications will correctly reflect the fact that you are running Post.Office version 1.9.3b.</li>
+</ol><p><em><strong>1.9.3 and 2.0 Only – UNIX Only – I was unable to upgrade successfully to version 2.0. </strong><strong>How do I restore Post.Office from my standard, full system backup files?</strong></em></p>
+<p>If you attempted to install the 2.0 release of Post.Office and received the following error message:</p>
+<p>pkgadd: ERROR: preinstall script did not complete successfully</p>
+<p>Installation of <SCOM-MTA> failed.</p>
+<p>you will be left in the pkgadd utility. Please type quit or it could attempt your conversion again. This message indicates that the conversion of your account database did not succeed. You will have to restore your system to the previous 1.9.3 version of Post.Office. After your system is restored and working, please contact <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b7e4c2c7c7d8c5c3f7e4d8d1c3c0d6c5d299d4d8da99">[email protected]</a> We will need to evaluate your problem and then assist you with the 2.0 upgrade.</p>
+<p><strong>Restoration Instructions for Solaris</strong><strong>:</strong></p>
+<p>The easiest way to restore is if you have made a total backup of your Post.Office including:</p>
+<ul><li>Post.Office Configuration information: </var/spool/>Post.Office</li>
+<li>Post.Office Mailbox information: </var/spool/>Mailbox</li>
+<li>Your Configuration File: /etc/post.office.conf</li>
+</ul><p>Assuming you took that precaution (as instructed in the README.TXT and RELNOTES.TXT files), please do the following:</p>
+<ol><li>If Post.Office is running please shut it down by typing:<br>
+</opt>/Post.Office shutdown</li>
+<li>Copy the existing, half-upgraded versions of the directories and files listed above to another location before attempting restoration.</li>
+<li>Restore the two file system directories containing Post.Office Configuration information and Post.Office Mailbox information, as well as the Configuration file from your backup on top of the existing half- upgraded versions.Note: You might run into ownership or permission problems if you didn’t back up or restore with the original permissions. It’s possible that executing a chown on the copied files and assigning ownership to your post.office user (mta) will be enough. (The standard permissions for UNIX are listed elsewhere in this FAQ for your review.)</li>
+<li>Remove the 2.0 executables with pkgrm:<br>
+pkgrm SCOM-MTA</li>
+<li>Download the 1.9.3b version of Post.Office for Solaris from our web site to a temporary directory.</li>
+<li>Uncompress the file you downloaded and expand the resulting archive file to create the Post.Office package (SCOM-MTA) by typing :cd /var/tmp/PO1.9.3b<br>
+uncompress post_office-solaris2-v1_9_3b_tar.Z<br>
+tar xvpf post_office-solaris2-v1_9_3b_tar</li>
+<li>From the location in which you stored it, install the 1.9.3b package by typing:<br>
+pkgadd -d . SCOM-MTA<strong>Caution:</strong> The upgrade program will ask if you wish to change configuration information. You should answer “no”.</li>
+<li>If you are currently using Program Delivery you will need to re-enable that feature by typing:</li>
+</ol><p>chmod u+s /opt/post.office/local/Program-Deliver</p>
+<p>rm /opt/post.office/trusted/NO-PROGRAM-DELIVERIES</p>
+<p><strong>Caution:</strong> There are security issues associated with the use of Program Delivery. Please read Appendix G of the Post.Office manual to ensure you understand those issues before enabling this feature.</p>
+<ol start="9"><li>Run the Post.Office configuration program: /opt/post.office/Install</li>
+</ol><p>This will restore your account information and upgrade your executables back to the 1.9.3b version of Post.Office.</p>
+<p><strong>Restoration Instructions for SunOS/Irix</strong><strong>:</strong></p>
+<p>The easiest way to restore is if you have made a total backup of your Post.Office including:</p>
+<ul><li>Post.Office Executables: </usr/local//>Post.Office</li>
+<li>Post.Office Configuration information: </var/spool/>Post.Office</li>
+<li>Post.Office Mailbox information: </var/spool/>Mailbox</li>
+<li>Your Configuration File: /etc/post.office.conf</li>
+</ul><p>Assuming you took that precaution (as instructed in the README.TXT and RELNOTES.TXT files), please:</p>
+<ol><li>If Post.Office is running shut it down by typing:<br>
+</usr>/local/Post.Office shutdown</li>
+<li>Copy the existing, half-upgraded versions of the directories and files listed above to another location before attempting restoration.</li>
+<li>Restore the three file system directories containing Post.Office Executables, Post.Office Configuration information, and Post.Office Mailbox information, as well as the configuration file from your backup on top of the existing half- upgraded versions.</li>
+</ol><p><em>Note: You might run into permission problems if you didn’t backup or restore with the </em><em>original permissions. The standard permissions for UNIX are listed elsewhere in this FAQ </em><em>for your review. Once you are restored and your permissions are properly set, start the </em><em>Post.Office server (i.e. </usr/local/>Post.Office/Post.Office startup).</em></p>
+<p><em><strong>1.9.3 and 2.0 Only – UNIX Only – What should I do if I was unable to upgrade </strong><strong>successfully to version 2.0 and I don’t have a standard, full system backup, just the </strong><strong>backup made during the upgrade?</strong></em></p>
+<p>You should have made a complete backup of your Post.Office system before upgrading (as instructed in the README.TXT and RELNOTES.TXT files). If you did not make a standard, full system backup as instructed, you will need to rely on the partial backup which was made during the upgrade.</p>
+<p>Please be aware, however, that your mailbox directories and the executable directory were <em>not</em> included in the partial backup. The half-converted executable directory cannot be used; it should be replaced with the 1.9.3b version of the executables which can be downloaded directly from our ftp site. You can still use the mailbox directories, but with the following caution: those users whose mail clients utilize the POP3 command “last” (i.e. Zmail) may experience the re-downloading of mail stored on the server the first time that their client contacts the server after the restoration</p>
+<p>After your system is restored and working, please contact <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="54072124243b262014073b3220233526317a373b39">[email protected]</a> for assistance with the 2.0 upgrade.</p>
+<p><strong>Restoration Instructions for Solaris</strong><strong>:</strong></p>
+<p>To restore your system with the 1.9.3b version of Post.Office, you will need to:</p>
+<ol><li>Shutdown Post.Office<br>
+</opt>/Post.Office shutdown</li>
+<li>For safety’s sake please copy the existing, partially modified versions of the mailbox directories and the executables directory to another location before attempting restoration.</li>
+<li>Remove the 2.0 executables with by typing: pkgrm SCOM-MTA</li>
+<li>Copy the original file and then replace the half upgraded version of your MTA-Accounts file with the backup of the file made during upgrade. If you attempted to run the upgrade more that once, make sure to restore the “first” backup made so that you restore the working 1.9.3b version of your MTA-Accounts database file:<br>
+cd </var/spool/>Post.Office/config<br>
+cp MTA-Accounts MTA-Accounts.bad2.0<br>
+cp MTA-Accounts.bak.yymmddhhmm MTA-AccountsNote: You might run into ownership or permission problems if you didn’t back up or restore with the original permissions. It’s possible that executing a chown on the copied files and assigning ownership to your post.office user (mta) will be enough. (The standard permissions for UNIX are listed elsewhere in this FAQ for your review.)</li>
+<li>Copy the original file and then replace the half upgraded version of your configuration files with the backup of the files made during the upgrade. You might have old ones there that you DON”T want to use, so only use the *.backup files with today’s date:<br>
+cd </var/spool/>Post.Office/configFor each *.backup file with <em>today’s</em> date:cp <ServerModuleName> <ServerModuleName>.bad2.0<br>
+cp <ServerModuleName>.backup <ServerModuleName>
+<p>Note: You might run into ownership or permission problems if you didn’t back up or restore with the original permissions. It’s possible that executing a chown on the copied files and assigning ownership to your post.office user (mta) will be enough. (The standard permissions for UNIX are listed elsewhere in this FAQ for your review.)</p></li>
+<li>Download the 1.9.3b version of Post.Office for Solaris from our web site to a temporary directory.</li>
+<li>Uncompress the file you downloaded and expand the resulting archive file to create the Post.Office package (SCOM-MTA) by typing:cd /var/tmp/PO1.9.3b<br>
+uncompress post_office-solaris2-v1_9_3b_tar.Z<br>
+tar xvpf post_office-solaris2-v1_9_3b_tar</li>
+<li>From the location in which you stored it, install the 1.9.3b package by typing:<br>
+pkgadd -d . SCOM-MTA<strong>Caution:</strong> The upgrade program will ask if you wish to change configuration information. You should answer “no”.</li>
+<li>If you are currently using Program Delivery you will need to re-enable that feature by typing:<br>
+chmod u+s /opt/post.office/local/Program-Deliver<br>
+rm /opt/post.office/trusted/NO-PROGRAM-DELIVERIES<strong>Caution:</strong> There are security issues associated with the use of Program Delivery. Please read Appendix G of the Post.Office manual to ensure you understand those issues before enabling this feature</li>
+<li>Run the Post.Office configuration program: /opt/post.office/Install</li>
+</ol><p>This will restore your account information and upgrade your executables back to the 1.9.3b version of Post.Office.</p>
+					<div class="clear"></div>
+				</div>
+				
+			</article></div>
+
+</div>
+
+
+	<div class="sidebar s1">
+		
+		<div class="sidebar-content">
+			
+						
+						
+			<div id="pages-2" class="widget widget_pages"><h3 class="group"><span>Pages</span></h3>		<ul><li class="page_item page-item-37"><a href="https://ironsummitmedia.github.io/home/">Home</a></li>
+<li class="page_item page-item-9"><a href="https://ironsummitmedia.github.io/startbootstrap-agency/">Startbootstrap Agency</a></li>
+<li class="page_item page-item-35"><a href="https://ironsummitmedia.github.io/startbootstrap-agency-2/">Startbootstrap Agency</a></li>
+<li class="page_item page-item-40"><a href="https://ironsummitmedia.github.io/startbootstrap-business-casual/">Startbootstrap business casual</a></li>
+<li class="page_item page-item-27"><a href="https://ironsummitmedia.github.io/startbootstrap-creative/">Startbootstrap Creative</a></li>
+<li class="page_item page-item-33"><a href="https://ironsummitmedia.github.io/startbootstrap-freelancer/">Startbootstrap Freelancer</a></li>
+<li class="page_item page-item-50"><a href="https://ironsummitmedia.github.io/startbootstrap-grayscale/">Startbootstrap Grayscale</a></li>
+<li class="page_item page-item-29"><a href="https://ironsummitmedia.github.io/startbootstrap-landing-page/">Startbootstrap Landing Page</a></li>
+<li class="page_item page-item-44 current_page_item"><a href="https://ironsummitmedia.github.io/startbootstrap-modern-business/">Startbootstrap Modern Business</a></li>
+<li class="page_item page-item-25"><a href="https://ironsummitmedia.github.io/startbootstrap-sb-admin/">Startbootstrap SB Admin</a></li>
+<li class="page_item page-item-31"><a href="https://ironsummitmedia.github.io/startbootstrap-sbadmin-2/">Startbootstrap SBAdmin 2</a></li>
+<li class="page_item page-item-48"><a href="https://ironsummitmedia.github.io/startbootstrap-scrolling-nav/">Startbootstrap Scrolling Nav</a></li>
+<li class="page_item page-item-46"><a href="https://ironsummitmedia.github.io/startbootstrap-simple-sidebar/">Startbootstrap Simple Sidebar</a></li>
+<li class="page_item page-item-42"><a href="https://ironsummitmedia.github.io/startbootstrap-stylish-portfolio/">Startbootstrap stylish portfolio</a></li>
+		</ul></div>			
+		</div>
+		
+	</div>
+	
+
+				</div>
+				
+				<footer id="footer"><div id="footer-bottom">
+						
+						<a id="back-to-top" href="#"><i class="fa fa-angle-up"></i></a>
+							
+						<div class="pad group">
+							
+							<div class="grid one-half">
+								
+																
+						
+								
+							</div>
+							
+							<div class="grid one-half last">	
+																																</div>
+						
+						</div>
+
+					</div>
+
+				</footer></div>	
+		</div>
+	</div>
+
+</div>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript" src="https://ironsummitmedia.github.io/wp-content/themes/boxstyle/js/jquery.fitvids.js"></script><script type="text/javascript" src="https://ironsummitmedia.github.io/wp-content/themes/boxstyle/js/owl.carousel.min.js"></script><script type="text/javascript" src="https://ironsummitmedia.github.io/wp-content/themes/boxstyle/js/jq-sticky-anything.min.js"></script><script type="text/javascript" src="https://ironsummitmedia.github.io/wp-content/themes/boxstyle/js/scripts.js"></script></body></html>

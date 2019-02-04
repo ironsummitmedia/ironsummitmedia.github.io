@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Startbootstrap Scrolling Nav – Github</title><script>document.documentElement.className = document.documentElement.className.replace("no-js","js");</script><link rel="dns-prefetch" href="//fonts.googleapis.com"><link rel="dns-prefetch" href="//s.w.org"><link rel="stylesheet" id="boxstyle-style-css" href="https://ironsummitmedia.github.io/wp-content/themes/boxstyle/style.css" type="text/css" media="all"><style id="boxstyle-style-inline-css" type="text/css">
+body { font-family: "Roboto", Arial, sans-serif; }
+
+img,
+.alx-tab img, 
+.alx-posts img,
+#profile-image img,
+.post-list .post-thumbnail img,
+.post-format,
+.post-thumbnail img,
+#flexslider-featured.featured .post-inner { -webkit-border-radius: px; border-radius: px; }
+#flexslider-featured.featured .post-title { border-radius: 0 0 px px; }
+				
+
+</style><link rel="stylesheet" id="boxstyle-responsive-css" href="https://ironsummitmedia.github.io/wp-content/themes/boxstyle/responsive.css" type="text/css" media="all"><link rel="stylesheet" id="boxstyle-font-awesome-css" href="https://ironsummitmedia.github.io/wp-content/themes/boxstyle/fonts/font-awesome.min.css" type="text/css" media="all"><link rel="stylesheet" id="roboto-css" href="//fonts.googleapis.com/css?family=Roboto%3A400%2C300italic%2C300%2C400italic%2C700&subset=latin%2Clatin-ext&ver=4.9.9" type="text/css" media="all"><script type="text/javascript" src="https://ironsummitmedia.github.io/wp-includes/js/jquery/jquery.js"></script><script type="text/javascript" src="https://ironsummitmedia.github.io/wp-includes/js/jquery/jquery-migrate.min.js"></script><script type="text/javascript" src="https://ironsummitmedia.github.io/wp-content/themes/boxstyle/js/jquery.flexslider.min.js"></script></head><body class="page-template-default page page-id-48 col-2cr full-width logged-out">
+
+<div id="wrapper">
+
+	<div class="container" id="page">
+		<div class="container-inner">			
+			<div class="main">
+			
+				<header id="header"><div class="group">
+						
+													<div class="group pad">
+								<p class="site-title"><a href="https://ironsummitmedia.github.io/" rel="home">Github</a></p>
+																	<p class="site-description">ironsummitmedia</p>
+															</div>
+												
+						
+					</div>
+					
+										
+					<div id="header-sticky">
+											</div>
+				
+				</header><div class="sidebar s2">
+																				</div>
+				<div class="clear"></div>
+
+								
+				<div class="main-inner group">
+
+<div class="content">
+	
+	<div class="page-title group">
+	<div class="pad group">
+
+			<h2>Startbootstrap Scrolling Nav</h2>
+
+			
+	</div>
+</div>	
+	<div class="pad group">
+		
+				
+			<article class="group post-48 page type-page status-publish hentry"><div class="entry themeform">
+					<p><strong>Revert Instructions for Solaris</strong><strong>:</strong></p>
+<p>If you made a total backup of your Post.Office system before upgrading (as instructed in the upgrade procedure) you should have copies of the following items:</p>
+<ul><li>Post.Office Executable Directories: </opt/>Post.Office</li>
+<li>Post.Office Spooling and Configuration information: </var/spool/>Post.Office</li>
+<li>Post.Office Mailbox information: </var/spool/>Mailbox</li>
+<li>Your Configuration File: /etc/post.office.conf</li>
+</ul><p>The instructions that follow will guide you through the reversion process. In summary you will be:</p>
+<p>– restoring the exectuable of the prior version from your backups or with packadd,</p>
+<p>– restoring configuration and account information from your prior version’s backups</p>
+<p>– and running a script that will restructure your mailbox directory to the prior version’s structure.</p>
+<p>These instructions will mean that you will lose any account and configuration changes done in 3.0, but no mail will be lost. Any account and configuration changes that you have done in 3.0 will have to be re-entered after the reversion process is completed.</p>
+<p>These instructions assume that you named the backup files as suggested. If you selected other names or locations for those files you will need to adjust the instructions accordingly.</p>
+<ol><li>If Post.Office is running please shut it down by typing:<br>
+</opt>/Post.Office shutdown</li>
+<li>Copy the existing, half-upgraded versions of the directories and files listed above to another location before attempting restoration.</li>
+<li>Restore the following sub-directory and all its file on top of your 3.0 versions from your prior version backups. This directory contains your account and configuration information:</li>
+<li>You might run into ownership or permission problems if you didn’t back up or restore with the original permissions. It’s possible that executing a chown on the copied files and assigning ownership to your post.office user (mta) will be enough. (The standard permissions for UNIX are listed elsewhere in this FAQ for your review.)</li>
+<li>We have written a perl script to help convert your mailbox directories from the new 3.0 structure to the old structure. (Note: You can download perl from the ftp site ntperl.hip.com.) Download from our ftp site a utility called unbucket.pl and run it using the following instructions:</li>
+</ol><ul><li>Type: ftp ftp.software.com</li>
+<li>Log in as anonymous.</li>
+<li>Use your e-mail address as the password.</li>
+<li>Change directory to the location of the utility by typing<br>
+cd ftp\postoffice\archive\<version no.>\nt\<yourplatform>\utilities\</li>
+<li>Download the executables in binary mode by typing:<br>
+bin<br>
+get unbucket.pl</li>
+<li>Move the unbucket.pl utility to your mailbox directory.</li>
+<li>Run the command by typing the following:<br>
+cd winnt\system32\spool\post.office\mailbox<br>
+perl unbucket.pl</li>
+</ul><ol><li>The bucketed mailboxes will be copied back up to the unbucketed structure.</li>
+<li>Remove the 3.0 executables with pkgrm:<br>
+pkgrm SCOM-MTA</li>
+<li>Download the version of Post.Office for Solaris that you were running prior to the upgrade (1.9.3 or 2.0) from our web site to a temporary directory.</li>
+<li><packagename>.tar.Z</li>
+<li>Uncompress the file you downloaded and expand the resulting archive file to create the Post.Office package (SCOM-MTA) by typing :cd /var/tmp/PO<version>uncompress <packagename>.tar.Z<br>
+tar xvpf <packgename>.tar</li>
+<li>From the location in which you stored it, install the package by typing:<br>
+pkgadd -d . SCOM-MTA<strong>Caution:</strong> The upgrade program will ask if you wish to change configuration information. You should answer “no”.</li>
+<li>If you are currently using Program Delivery you may need to re-enable that feature by typing:chmod u+s /opt/post.office/local/Program-Deliver<br>
+rm /opt/post.office/trusted/NO-PROGRAM-DELIVERIES</li>
+<li>Run the Post.Office configuration program:</li>
+</ol><p>For 1.9.3: /opt/post.office/Install</p>
+<p>For 2.0: /opt/post.office/Setup</p>
+<p>This will revert your account information and upgrade your executables back to your prior version of Post.Office.</p>
+<p><strong>Revert Instructions for SunOS/Irix</strong><strong>:</strong></p>
+<p>The easiest way to restore is if you have made a total backup of your Post.Office including:</p>
+<ul><li>Post.Office Executables: </usr/local//>Post.Office</li>
+<li>Post.Office Spooling and Configuration information: </var/spool/>Post.Office</li>
+<li>Post.Office Mailbox information: </var/spool/>Mailbox</li>
+<li>Your Configuration File: /etc/post.office.conf</li>
+</ul><p>Assuming you took that precaution (as instructed in the README.TXT and RELNOTES.TXT files), please:</p>
+<ol><li>If Post.Office is running shut it down by typing:<br>
+</usr>/local/Post.Office shutdown</li>
+<li>Copy the existing, half-upgraded versions of the directories and files listed above to another location before attempting restoration.</li>
+<li>Restore the following sub-directory and all its file on top of your 3.0 versions from your prior version backups. This directory contains your account and configuration information:</li>
+<li>You might run into ownership or permission problems if you didn’t back up or restore with the original permissions. It’s possible that executing a chown on the copied files and assigning ownership to your post.office user (mta) will be enough. (The standard permissions for UNIX are listed elsewhere in this FAQ for your review.)</li>
+<li>Restore the file system directories containing your prior version’s Post.Office Executables on top of the 3.0 executables.</li>
+<li>We have written a perl script to help convert your mailbox directories from the new 3.0 structure to the old structure. (Note: You can download perl from the ftp site ntperl.hip.com.) Download from our ftp site a utility called unbucket.pl and run it using the following instructions:</li>
+</ol><ul><li>Type: ftp ftp.software.com</li>
+<li>Log in as anonymous.</li>
+<li>Use your e-mail address as the password.</li>
+<li>Change directory to the location of the utility by typing<br>
+cd ftp\postoffice\archive\<version no.>\nt\<yourplatform>\utilities\</li>
+<li>Download the executables in binary mode by typing:<br>
+bin<br>
+get unbucket.pl</li>
+<li>Move the unbucket.pl utility to your mailbox directory.</li>
+<li>Run the command by typing the following:<br>
+cd winnt\system32\spool\post.office\mailbox<br>
+perl unbucket.pl</li>
+</ul><ol><li>The bucketed mailboxes will be copied back up to the unbucketed structure.</li>
+</ol><p>Note: You might run into permission problems if you didn’t backup or restore with the original permissions. The standard permissions for UNIX are listed elsewhere in this FAQ for your review. Once you are restored and your permissions are properly set, start the Post.Office server (i.e. </usr/local/>Post.Office/Post.Office startup).</p>
+<p><em><strong>1.9.3 and 2.0 Only – NT Only – My system crashed. How do I restore Post.Office </strong><strong>from my standard, full system backup files?</strong></em></p>
+<ol><li>Once you have re-installed NT, you must re-install Post.Office on the machine by:<br>
+– Running Setup<br>
+– Accessing Post.Office as “Postmaster” to complete the Installation Wrap-up Form</li>
+<li>After Post.Office has been re-installed, stop the Post.Office service.</li>
+<li>Using REGEDT32 take ownership of the MTA-Accounts key again and restore the key from disk.</li>
+<li>Assign your post.office user with Full Control Rights over the MTA-Accounts directory and remove the Everyone Group. Make this change recursive by selecting “Replace Permissions on Existing Subkeys”!</li>
+<li>Copy the PostOfficeDir directory from backup over the new PostOfficeDir directory. Assign “Full Control” Rights to your post.office-user, “Read” Rights to Administrators, and remove Everyone recursively down all directories and files!<\winnt35\system32>\spool\post.office\ Post.Office-user Full Control<br>
+Administrator Read<\winnt35\system32>\spool\post.office \config\ <Same><br>
+(configuration files such as auto-replies and finger information)
+<p><\winnt35\system32>\spool\post.office \config\<subdirectories> <Same></p>
+<p><\winnt35\system32>\spool\post.office\control\ <Same><br>
+(control files of queued messages)</p>
+<p><\winnt35\system32>\spool\post.office\deferred\ <Same><br>
+(control files of messages deferred or in error)</p>
+<p><\winnt35\system32>\spool\post.office\messages\ <Same><br>
+(body and header files for messages that are queued or deferred)</p></li>
+<li>Assign “Change” Rights to Administrators in the PostOfficeDir/log directory recursively down all directories and files!<\winnt35\system32>\spool\post.office\log\<br>
+Post.Office-user Full Control<br>
+(log files) Administrator Change</li>
+<li>Copy the mailbox directory from backup over the new MailboxDir directory. Assign your post.office-user with Full Control Rights and remove Everyone recursively down all directories and files!For example:<br>
+<\winnt35\system32>\spool\post.office\mailbox\<br>
+Post.Office-user Full Control<br>
+<\winnt35\system32>\spool\post.office\mailbox\Users_Real_Name_1\<br>
+<Same><br>
+<\winnt35\system32>\spool\post.office\mailbox\Users_Real_Name_1\In<br>
+<Same><br>
+199609241202…@postofficehostname.domainname.1</li>
+<li>Re-start the Post.Office service.</li>
+</ol><div class="clear"></div>
+				</div>
+				
+			</article></div>
+
+</div>
+
+
+	<div class="sidebar s1">
+		
+		<div class="sidebar-content">
+			
+						
+						
+			<div id="pages-2" class="widget widget_pages"><h3 class="group"><span>Pages</span></h3>		<ul><li class="page_item page-item-37"><a href="https://ironsummitmedia.github.io/home/">Home</a></li>
+<li class="page_item page-item-9"><a href="https://ironsummitmedia.github.io/startbootstrap-agency/">Startbootstrap Agency</a></li>
+<li class="page_item page-item-35"><a href="https://ironsummitmedia.github.io/startbootstrap-agency-2/">Startbootstrap Agency</a></li>
+<li class="page_item page-item-40"><a href="https://ironsummitmedia.github.io/startbootstrap-business-casual/">Startbootstrap business casual</a></li>
+<li class="page_item page-item-27"><a href="https://ironsummitmedia.github.io/startbootstrap-creative/">Startbootstrap Creative</a></li>
+<li class="page_item page-item-33"><a href="https://ironsummitmedia.github.io/startbootstrap-freelancer/">Startbootstrap Freelancer</a></li>
+<li class="page_item page-item-50"><a href="https://ironsummitmedia.github.io/startbootstrap-grayscale/">Startbootstrap Grayscale</a></li>
+<li class="page_item page-item-29"><a href="https://ironsummitmedia.github.io/startbootstrap-landing-page/">Startbootstrap Landing Page</a></li>
+<li class="page_item page-item-44"><a href="https://ironsummitmedia.github.io/startbootstrap-modern-business/">Startbootstrap Modern Business</a></li>
+<li class="page_item page-item-25"><a href="https://ironsummitmedia.github.io/startbootstrap-sb-admin/">Startbootstrap SB Admin</a></li>
+<li class="page_item page-item-31"><a href="https://ironsummitmedia.github.io/startbootstrap-sbadmin-2/">Startbootstrap SBAdmin 2</a></li>
+<li class="page_item page-item-48 current_page_item"><a href="https://ironsummitmedia.github.io/startbootstrap-scrolling-nav/">Startbootstrap Scrolling Nav</a></li>
+<li class="page_item page-item-46"><a href="https://ironsummitmedia.github.io/startbootstrap-simple-sidebar/">Startbootstrap Simple Sidebar</a></li>
+<li class="page_item page-item-42"><a href="https://ironsummitmedia.github.io/startbootstrap-stylish-portfolio/">Startbootstrap stylish portfolio</a></li>
+		</ul></div>			
+		</div>
+		
+	</div>
+	
+
+				</div>
+				
+				<footer id="footer"><div id="footer-bottom">
+						
+						<a id="back-to-top" href="#"><i class="fa fa-angle-up"></i></a>
+							
+						<div class="pad group">
+							
+							<div class="grid one-half">
+								
+																
+						
+								
+							</div>
+							
+							<div class="grid one-half last">	
+																																</div>
+						
+						</div>
+
+					</div>
+
+				</footer></div>	
+		</div>
+	</div>
+
+</div>
+
+<script type="text/javascript" src="https://ironsummitmedia.github.io/wp-content/themes/boxstyle/js/jquery.fitvids.js"></script><script type="text/javascript" src="https://ironsummitmedia.github.io/wp-content/themes/boxstyle/js/owl.carousel.min.js"></script><script type="text/javascript" src="https://ironsummitmedia.github.io/wp-content/themes/boxstyle/js/jq-sticky-anything.min.js"></script><script type="text/javascript" src="https://ironsummitmedia.github.io/wp-content/themes/boxstyle/js/scripts.js"></script></body></html>

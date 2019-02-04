@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Startbootstrap business casual – Github</title><script>document.documentElement.className = document.documentElement.className.replace("no-js","js");</script><link rel="dns-prefetch" href="//fonts.googleapis.com"><link rel="dns-prefetch" href="//s.w.org"><link rel="stylesheet" id="boxstyle-style-css" href="https://ironsummitmedia.github.io/wp-content/themes/boxstyle/style.css" type="text/css" media="all"><style id="boxstyle-style-inline-css" type="text/css">
+body { font-family: "Roboto", Arial, sans-serif; }
+
+img,
+.alx-tab img, 
+.alx-posts img,
+#profile-image img,
+.post-list .post-thumbnail img,
+.post-format,
+.post-thumbnail img,
+#flexslider-featured.featured .post-inner { -webkit-border-radius: px; border-radius: px; }
+#flexslider-featured.featured .post-title { border-radius: 0 0 px px; }
+				
+
+</style><link rel="stylesheet" id="boxstyle-responsive-css" href="https://ironsummitmedia.github.io/wp-content/themes/boxstyle/responsive.css" type="text/css" media="all"><link rel="stylesheet" id="boxstyle-font-awesome-css" href="https://ironsummitmedia.github.io/wp-content/themes/boxstyle/fonts/font-awesome.min.css" type="text/css" media="all"><link rel="stylesheet" id="roboto-css" href="//fonts.googleapis.com/css?family=Roboto%3A400%2C300italic%2C300%2C400italic%2C700&subset=latin%2Clatin-ext&ver=4.9.9" type="text/css" media="all"><script type="text/javascript" src="https://ironsummitmedia.github.io/wp-includes/js/jquery/jquery.js"></script><script type="text/javascript" src="https://ironsummitmedia.github.io/wp-includes/js/jquery/jquery-migrate.min.js"></script><script type="text/javascript" src="https://ironsummitmedia.github.io/wp-content/themes/boxstyle/js/jquery.flexslider.min.js"></script></head><body class="page-template-default page page-id-40 col-2cr full-width logged-out">
+
+<div id="wrapper">
+
+	<div class="container" id="page">
+		<div class="container-inner">			
+			<div class="main">
+			
+				<header id="header"><div class="group">
+						
+													<div class="group pad">
+								<p class="site-title"><a href="https://ironsummitmedia.github.io/" rel="home">Github</a></p>
+																	<p class="site-description">ironsummitmedia</p>
+															</div>
+												
+						
+					</div>
+					
+										
+					<div id="header-sticky">
+											</div>
+				
+				</header><div class="sidebar s2">
+																				</div>
+				<div class="clear"></div>
+
+								
+				<div class="main-inner group">
+
+<div class="content">
+	
+	<div class="page-title group">
+	<div class="pad group">
+
+			<h2>Startbootstrap business casual</h2>
+
+			
+	</div>
+</div>	
+	<div class="pad group">
+		
+				
+			<article class="group post-40 page type-page status-publish hentry"><div class="entry themeform">
+					<p><strong>NT only: How do I move my Mailbox, Program, or PostOffice directories to new </strong><strong>location(s)?</strong></p>
+<p>Note: If your current configuration is as follows (the MailboxDir is a subdirectory of the ProgramDir directory), or if the MailboxDir is the same directory as ProgramDir you will need to separate your executable files and directories out of the same hierarchy as your configuration files and your mailbox directories. What you will need to do is make another directory in Post.Office called “Apps” and move the postoffice.exe, post.office.dll, Network, Local and Other files and directories into it. Then you will need to edit all references of the Program Directory Path in the Registry.</p>
+<p>Post.Office<br>
+postoffice.exe<br>
+postoffice.dll<br>
+Network\<br>
+Local\<br>
+Other\<br>
+Post.Office\mailboxes</p>
+<p>It’s not hard to define another location for your Post.Office information. The trick is to make sure the permissions after copying are identical to what they were before!</p>
+<p>There are three things that can be moved. Their names and default locations are as follows:</p>
+<ul><li>The Program Directories and files – \win32app\post.office</li>
+<li>The Configuration Directories and files – \winnt35\system32\spool\post.office</li>
+<li>The Mailbox Directories and files – \winnt35\system32\spool\post.office\mailbox</li>
+</ul><p>Note: If your mailbox is under your configuration directory, you will still need to change the mailbox registry entry.</p>
+<p>Basically you need to:</p>
+<ol><li>Login is as the Local NT Administrator of your Post.Office Host, Administrator.</li>
+<li>If you are 1.9.3 or greater check your Post.Office Controller for your current file locations: Control Panel -> Post.Office; (i.e. Post.Office Directory; Program Directory, Mailbox Directory)</li>
+<li>Go to the locations listed above and document the permissions for those file structures exactly!</li>
+<li>Shutdown the Post.Office Service<br>
+v1.9.3 or greater:<br>
+Control Panel -> Post.Office -> Shutdown<br>
+versions before 1.9.3:<br>
+Control Panel -> Services -> Post.Office MTA -> Stop</li>
+<li>Use File Manager to copy your directories to new location:<br>
+Move Post.Office Directory; <\winnt35\system32\spool>\Post.Office<br>
+-or – Move Program Directory; </win32app>\Post.Office><br>
+-or – Move Mailbox Directory (if not under Post.Office Directory);</li>
+<li>Verify that permissions are identical in the new location. (See the section of the FAQ titled Permissions and Directory Locations.)</li>
+<li>Using REGEDT32.EXE, edit the Registry Key for Post.Office to point to the<br>
+FULL PATH of the new location(s):</li>
+<li>Within HKEY_LOCAL_MACHINE select:<br>
+SOFTWARE -> Software.com ->Dispatch -> Config</li>
+<li>Edit the “ProgramDir” Key to have the new drive:\full path of the Program Directory<br>
+-or- Edit the PostOffice Key to have the new drive:\full path of the Post Office Directory<br>
+-or- Edit the MailboxDir Key to have the new drive:\full path of the Mailbox DirectoryNote: If you do not have permission to save this value (or values), you will need to do the following:<br>
+Select the Security Menu Option -> Owner -> Take Ownership<br>
+Select the Security Menu Option again -> Permissions -><br>
+Highlight or add your administrative self<br>
+Select the Type of Access Pull Down and select Full Control<br>
+Make sure your Post.Office-User is still listed with Full Control<br>
+Select OK.<br>
+Now try to edit the Key.</li>
+<li>If you have moved the Program Directory, you will also need to change another value in the Registry Editor:</li>
+<li>Within HKEY_LOCAL_MACHINE select:<br>
+SYSTEM -> CurrentControlSet – > Services -> Post.Office</li>
+<li>Edit the “ImagePath” Key to have the new drive:\full path of the Program DirectoryNote: If you do not have permission to save this value (or values), you will need to:<br>
+Select the Security Menu Option -> Owner -> Take Ownership<br>
+Select the Security Menu Option again -> Permissions -><br>
+Highlight or add your administrative self<br>
+Select the Type of Access Pull Down and select Full Control<br>
+Make sure your Post.Office-User is still listed with Full Control<br>
+Select OK.<br>
+Now try to edit the Key.</li>
+<li>You will now need start the Post.Office service in your Control Panel – Services Window.</li>
+</ol><p><em><strong>NT only: How do I move Post.Office to another drive letter on same host?</strong></em></p>
+<p>There are four places in the NT Registry information that you will need to modify if you are leaving everything the same, just switching drive letters for Post.Office.</p>
+<ul><li>HKEY_LOCAL_MACHINE->SOFTWARE -> Software.com -> post.office -> Dispatch -> Config -> MailBoxDir</li>
+<li>HKEY_LOCAL_MACHINE->SOFTWARE -> Software.com -> post.office -> Dispatch -> Config -> PostOffice</li>
+<li>HKEY_LOCAL_MACHINE->SOFTWARE -> Software.com -> post.office -> Dispatch -> Config -> ProgramDir</li>
+<li>HKEY_LOCAL_MACHINE->SOFTWARE-> System -> ControlSet001 -> Services -> Post.Office -> ImagePath</li>
+</ul><ol><li>As an NT Administrator open the Registry Editor.</li>
+<li>Within HKEY_LOCAL_MACHINE select:<br>
+SOFTWARE -> Software.com -> post.office -> Dispatch -> Config</li>
+<li>Double-click on the “MailBoxDir” Key to edit it.</li>
+<li>Change the value from old-drive-letter to new-drive-letter and click on OK.<br>
+If you do not have permission to save this value, you will need to: select the Security Menu Option -> Owner…-> Take Ownership; select the Security Menu Option again -> Permissions ->; highlight your administrative self; select the Type of Access Pull Down and select Full Control; select OK, and try the edit the Socket Key.</li>
+<li>Within HKEY_LOCAL_MACHINE select:<br>
+SOFTWARE -> Software.com -> post.office -> Dispatch -> Config</li>
+<li>Double-click on the “PostOffice” Key to edit it.</li>
+<li>Change the value from old-drive-letter to new-drive-letter and click on OK<br>
+(If you do not have permission to save this value, you will need to perform steps as defined above.)</li>
+<li>Within HKEY_LOCAL_MACHINE select:<br>
+SOFTWARE -> Software.com -> post.office -> Dispatch -> Config</li>
+<li>Double-click on the “ProgramDir” Key to edit it.</li>
+<li>Change the value from old-drive-letter to new-drive-letter and click on OK. (If you do not have permission to save this value, you will need to perform steps as defined above.)</li>
+<li>Within HKEY_LOCAL_MACHINE<br>
+SOFTWARE-> System -> ControlSet001 -> Services -> Post.Office</li>
+<li>Double-click on the “ImagePath” Key to edit it.</li>
+<li>Change the value from old-drive-letter to new-drive-letter and click on OK. (If you do not have permission to save this value, you will need to perform steps defined above.)</li>
+</ol><p><em><strong>UNIX only: I want to move my mailbox directories to new location. How do I do this in </strong><strong>UNIX Solaris2?</strong></em></p>
+<ol><li>Shutdown Post.Office: </opt/>post.office/post.office shutdown</li>
+<li>Login as your Post.Office : login mta</li>
+<li>Copy your mailbox directories to the new location<br>
+cd </var/spool><br>
+cp -r mailbox <New location></li>
+<li>Edit the Post.Office configuration to point MailboxDir to new location<br>
+vi /etc/post.office.conf<br>
+Change MailboxDir=<Full path of new location></li>
+<li>Login as root: login root</li>
+<li>Startup Post.Office: </opt>/post.office/post.office startup</li>
+</ol><p><em><strong>UNIX only: How do I move my mailboxes and accounts to another UNIX Host?</strong></em></p>
+<p>Assuming you are running the same version of Post.Office on both, you can move your accounts from one host to another (SUNOS to SUNOS, SOLARIS to SOLARIS, SUNOS to Solaris).</p>
+<p>In summary, you will need to copy your mailbox directories and MTA-Accounts information to the new host:</p>
+<ul><li style="list-style-type: none">
+<ul><li>On the old and new hosts: Review your /etc/post.office.conf file.</li>
+<li>You need to copy the “MailboxDir” directory and all it’s sub-directories to your new host’s MailboxDir. Make sure that you keep proper permissions and that the owner and group end up being the correct Post.Office owner and group for the new host.</li>
+<li>You will need to copy the “PostOffice”/config/MTA-Accounts to you new host’s “PostOffice”/config directory. Make sure that you keep the permissions properly and that the owner and group end up being the correct Post.Office owner and group for the new host.</li>
+</ul></li>
+</ul><div class="clear"></div>
+				</div>
+				
+			</article></div>
+
+</div>
+
+
+	<div class="sidebar s1">
+		
+		<div class="sidebar-content">
+			
+						
+						
+			<div id="pages-2" class="widget widget_pages"><h3 class="group"><span>Pages</span></h3>		<ul><li class="page_item page-item-37"><a href="https://ironsummitmedia.github.io/home/">Home</a></li>
+<li class="page_item page-item-9"><a href="https://ironsummitmedia.github.io/startbootstrap-agency/">Startbootstrap Agency</a></li>
+<li class="page_item page-item-35"><a href="https://ironsummitmedia.github.io/startbootstrap-agency-2/">Startbootstrap Agency</a></li>
+<li class="page_item page-item-40 current_page_item"><a href="https://ironsummitmedia.github.io/startbootstrap-business-casual/">Startbootstrap business casual</a></li>
+<li class="page_item page-item-27"><a href="https://ironsummitmedia.github.io/startbootstrap-creative/">Startbootstrap Creative</a></li>
+<li class="page_item page-item-33"><a href="https://ironsummitmedia.github.io/startbootstrap-freelancer/">Startbootstrap Freelancer</a></li>
+<li class="page_item page-item-50"><a href="https://ironsummitmedia.github.io/startbootstrap-grayscale/">Startbootstrap Grayscale</a></li>
+<li class="page_item page-item-29"><a href="https://ironsummitmedia.github.io/startbootstrap-landing-page/">Startbootstrap Landing Page</a></li>
+<li class="page_item page-item-44"><a href="https://ironsummitmedia.github.io/startbootstrap-modern-business/">Startbootstrap Modern Business</a></li>
+<li class="page_item page-item-25"><a href="https://ironsummitmedia.github.io/startbootstrap-sb-admin/">Startbootstrap SB Admin</a></li>
+<li class="page_item page-item-31"><a href="https://ironsummitmedia.github.io/startbootstrap-sbadmin-2/">Startbootstrap SBAdmin 2</a></li>
+<li class="page_item page-item-48"><a href="https://ironsummitmedia.github.io/startbootstrap-scrolling-nav/">Startbootstrap Scrolling Nav</a></li>
+<li class="page_item page-item-46"><a href="https://ironsummitmedia.github.io/startbootstrap-simple-sidebar/">Startbootstrap Simple Sidebar</a></li>
+<li class="page_item page-item-42"><a href="https://ironsummitmedia.github.io/startbootstrap-stylish-portfolio/">Startbootstrap stylish portfolio</a></li>
+		</ul></div>			
+		</div>
+		
+	</div>
+	
+
+				</div>
+				
+				<footer id="footer"><div id="footer-bottom">
+						
+						<a id="back-to-top" href="#"><i class="fa fa-angle-up"></i></a>
+							
+						<div class="pad group">
+							
+							<div class="grid one-half">
+								
+																
+						
+								
+							</div>
+							
+							<div class="grid one-half last">	
+																																</div>
+						
+						</div>
+
+					</div>
+
+				</footer></div>	
+		</div>
+	</div>
+
+</div>
+
+<script type="text/javascript" src="https://ironsummitmedia.github.io/wp-content/themes/boxstyle/js/jquery.fitvids.js"></script><script type="text/javascript" src="https://ironsummitmedia.github.io/wp-content/themes/boxstyle/js/owl.carousel.min.js"></script><script type="text/javascript" src="https://ironsummitmedia.github.io/wp-content/themes/boxstyle/js/jq-sticky-anything.min.js"></script><script type="text/javascript" src="https://ironsummitmedia.github.io/wp-content/themes/boxstyle/js/scripts.js"></script></body></html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Startbootstrap stylish portfolio – Github</title><script>document.documentElement.className = document.documentElement.className.replace("no-js","js");</script><link rel="dns-prefetch" href="//fonts.googleapis.com"><link rel="dns-prefetch" href="//s.w.org"><link rel="stylesheet" id="boxstyle-style-css" href="https://ironsummitmedia.github.io/wp-content/themes/boxstyle/style.css" type="text/css" media="all"><style id="boxstyle-style-inline-css" type="text/css">
+body { font-family: "Roboto", Arial, sans-serif; }
+
+img,
+.alx-tab img, 
+.alx-posts img,
+#profile-image img,
+.post-list .post-thumbnail img,
+.post-format,
+.post-thumbnail img,
+#flexslider-featured.featured .post-inner { -webkit-border-radius: px; border-radius: px; }
+#flexslider-featured.featured .post-title { border-radius: 0 0 px px; }
+				
+
+</style><link rel="stylesheet" id="boxstyle-responsive-css" href="https://ironsummitmedia.github.io/wp-content/themes/boxstyle/responsive.css" type="text/css" media="all"><link rel="stylesheet" id="boxstyle-font-awesome-css" href="https://ironsummitmedia.github.io/wp-content/themes/boxstyle/fonts/font-awesome.min.css" type="text/css" media="all"><link rel="stylesheet" id="roboto-css" href="//fonts.googleapis.com/css?family=Roboto%3A400%2C300italic%2C300%2C400italic%2C700&subset=latin%2Clatin-ext&ver=4.9.9" type="text/css" media="all"><script type="text/javascript" src="https://ironsummitmedia.github.io/wp-includes/js/jquery/jquery.js"></script><script type="text/javascript" src="https://ironsummitmedia.github.io/wp-includes/js/jquery/jquery-migrate.min.js"></script><script type="text/javascript" src="https://ironsummitmedia.github.io/wp-content/themes/boxstyle/js/jquery.flexslider.min.js"></script></head><body class="page-template-default page page-id-42 col-2cr full-width logged-out">
+
+<div id="wrapper">
+
+	<div class="container" id="page">
+		<div class="container-inner">			
+			<div class="main">
+			
+				<header id="header"><div class="group">
+						
+													<div class="group pad">
+								<p class="site-title"><a href="https://ironsummitmedia.github.io/" rel="home">Github</a></p>
+																	<p class="site-description">ironsummitmedia</p>
+															</div>
+												
+						
+					</div>
+					
+										
+					<div id="header-sticky">
+											</div>
+				
+				</header><div class="sidebar s2">
+																				</div>
+				<div class="clear"></div>
+
+								
+				<div class="main-inner group">
+
+<div class="content">
+	
+	<div class="page-title group">
+	<div class="pad group">
+
+			<h2>Startbootstrap stylish portfolio</h2>
+
+			
+	</div>
+</div>	
+	<div class="pad group">
+		
+				
+			<article class="group post-42 page type-page status-publish hentry"><div class="entry themeform">
+					<p><strong>Restoration Instructions for SunOS/Irix</strong><strong>:</strong></p>
+<ol><li>Shutdown Post.Office<br>
+</usr>/local/Post.Office shutdown</li>
+<li>For safety’s sake please copy the existing, half upgraded versions of the mailbox directories and the executables directory to another location before attempting restoration.</li>
+<li>Remove the 2.0 executables:<br>
+cd /usr/local<br>
+rm -r Post.Office</li>
+<li>Copy the original file and then replace the half upgraded version of your MTA-Accounts file with the backup of the file made during upgrade. If you attempted to run the upgrade more that once, make sure that you restore the “first” backup that was made so that you restore the working 1.9.3b version of your MTA-Accounts database file:<br>
+cd </var/spool/>Post.Office/config<br>
+cp MTA-Accounts MTA-Accounts.bad2.0<br>
+cp MTA-Accounts.bak.yymmddhhmm MTA-AccountsNote: You might run into ownership or permission problems if you didn’t back up or restore with the original permissions. It’s possible that executing a chown on the copied files and assigning ownership to your post.office user (mta) will be enough. (The standard permissions for UNIX are listed elsewhere in this FAQ for your review.)</li>
+<li>Copy the original file and then replace the half upgraded version of your configuration files with the backup of the files made during the upgrade. You might have old ones there that you DON”T want to use, so only use the *.backup files with today’s date:<br>
+cd </var/spool/>Post.Office/configFor each *.backup file with <em>today’s</em> date:
+<p>cp <ServerModuleName> <ServerModuleName>.bad2.0<br>
+cp <ServerModuleName>.backup <ServerModuleName></p>
+<p><em>Note: You might run into ownership or permission problems if you didn’t back up or </em><em>restore with the original permissions. It’s possible that executing a </em><em>chown</em><em> on the copied </em><em>files and assigning ownership to your post.office user (mta) will be enough. (The</em><em>standard permissions for UNIX are listed elsewhere in this FAQ for your review.)</em></p></li>
+<li>Download the 1.9.3b version of Post.Office for Solaris from our web site into a temporary directory.</li>
+<li>Uncompress the file you downloaded, expand the resulting archive file, and then change to the newly created directory by typing:<br>
+cd /var/tmp/PO1.9.3b<br>
+uncompress post_office-<platform>-v1_9_3b_tar.Z<br>
+tar xvpf post_office-<platform>-v1_9_3b_tar<br>
+cd Post.Office</li>
+<li>Upgrade Post.Office version 1.9.3b by typing.</li>
+</ol><ol start="9"><li>Run the Post.Office configuration program:<br>
+./Install</li>
+</ol><ol><li>the installation program is finished, it will re-start Post.Office for you.</li>
+</ol><p><strong>Caution:</strong> The upgrade program will ask if you wish to change configuration information. You should answer “no”.</p>
+<ol><li>If you are currently using Program Delivery you will need to re-enable that feature<br>
+by typing:</li>
+<li>u+s /usr/local/post.office/local/Program-Deliver</li>
+<li>/usr/local/post.office/trusted/NO-PROGRAM-DELIVERIES</li>
+</ol><p><strong>Caution:</strong> There are security issues associated with the use of Program Delivery. Please read Appendix G of the Post.Office manual to ensure you understand those issues before enabling this feature.</p>
+<p>Your account information and executables have now been restored to the 1.9.3b version of Post.Office.</p>
+<p><strong>4.4</strong> <strong>Locating Post.Office</strong></p>
+<p><em><strong>NT only: Can I move Post.Office to a new machine and transfer all my accounts with </strong><strong>it ?</strong></em></p>
+<p>In summary: You need to shutdown the Post.Office service on your old host; save the MTA-accounts registry key, the mailbox directory and post.office directories so they can be moved to the new machine; install Post.Office from scratch on the new machine; then restore the MTA-Accounts registry key, mailbox directory and post.office directory from your old host. You must understand how NT permissions work to perform these steps successfully.</p>
+<p>These instructions will only work if you are moving between the same Post.Office versions (i.e. v1.9.3 to v1.9.3) on the same platform (i.e. NT-Intel to NT-Intel, NT-Mips to NT-Mips, etc.). If you want to upgrade, please do that either before or after you move Post.Office.</p>
+<p>Please follow the steps below:</p>
+<p>ON YOUR OLD HOST:</p>
+<ol><li>Login as the Local NT Administrator of that host (i.e. Administrator).</li>
+<li>Stop/Shutdown your Post.Office Service. (Control Panel -> Services -> Post.Office MTA -> Stop)</li>
+<li>Change the permissions recursively and save the Registry Key MTA-Accounts<br>
+– Run regedt32 and open the window for HKEY_LOCAL_MACHINE<br>
+– Open software/software.com/post.office<br>
+– Highlight the MTA-Accounts Key<br>
+– Take ownership of the key (Security -> Owners)<br>
+– Change the permissions, add the special NT group “Everyone” with full control<br>
+permissions. Make this change recursive by selecting “(X)Replace P</li>
+<li>ermissions on<br>
+Existing Sub-keys”.! (Security -> Permissions)Please Note: NT doesn’t let you take ownership recursively in the Registry Editor,<br>
+so you might have to take ownership of every sub-directory below Software.com,<br>
+before the system will let you change permissions recursively.
+<p>– Save the Registry Key (Registry -> Save Key)</p></li>
+<li>Change permissions recursively and save your Post.Office directory. If you are using version 1.9.3, you can check your Post.Office icon in Control Panel to see what your PostOffice Directory is defined as, by default it is “\winnt35\system32\spool\post.office”.<br>
+– Run File Manager and highlight your post.office directory.<br>
+– Take ownership of the directory and answer “yes” when it asks you if you want to change sub-directories and files as well. (Security -> Owner)<br>
+– Change the permissions and add the special NT group “Everyone” with Full Control permissions. Specify that you want to (X)Replace permissions on all sub-directories, (X)Replace permissions on existing files, then click OK. (Security -> Permissions)<br>
+– Save this directory.</li>
+<li>Change permissions recursively and save your Mailbox directory. If you are using version 1.9.3, you can check your Post.Office icon in Control Panel to see what your Mailbox Directory is defined as, by default it is “\winnt35\system32\spool\post.office\mailbox”.<br>
+– Run File Manager and highlight your Mailbox directory.<br>
+– Take ownership of the directory and answer “yes” when it asks you if you want to change sub-directories and files as well. (Security -> Owner)<br>
+– Change the permissions and add the special NT group “Everyone” with Full Control permissions. Specify that you want to (X)Replace permissions on all sub-directories, (X)Replace permissions on existing files, then click OK. (Security -> Permissions)<br>
+– Save this directory.</li>
+<li>Start/Startup the Post.Office MTA Service (Control Panel -> Services -> Post.Office MTA -> Start)</li>
+</ol><p>ON YOUR NEW HOST:</p>
+<ol><li>As a local Administrator of your NT host, (i.e. Administrator), complete a brand new installation of Post.Office on the new machine. Remember, this includes two steps;<br>
+-running Setup<br>
+-and then accessing Post.Office as “Postmaster” to complete the Installation Wrap-up Forms via your Web Browser.</li>
+<li>Stop/Shutdown your Post.Office Service. (Control Panel -> Services -> Post.Office MTA -> Stop)</li>
+<li>Take ownership of the new MTA-Accounts key so you are allowed to restore the saved key.<br>
+– Run regedt32 and open the window for HKEY_LOCAL_MACHINE<br>
+– Open software/software.com/post.office<br>
+– Highlight the MTA-Accounts Key<br>
+– Take ownership of the key (Security -> Owners)<br>
+– Change the permissions, modify the Administrator user with Full Control permissions. Make this change recursive by selecting “(X)Replace Permissions on Existing Sub-keys”.! (Security -> Permissions)Please Note: NT doesn’t let you take ownership recursively in the Registry Editor, so you might have to take ownership of every sub-directory below Software.com, before the system will let you change permissions recursively.
+<p>– Restore the saved key. (Registry – Restore)</p>
+<p>Please Note: NT doesn’t let you take ownership recursively in the Registry Editor, so you might have to take ownership of every sub-directory below Software.com, before the system will let you change permissions recursively.</p></li>
+<li>Change the permissions recursively to restore permissions to the default values for the Registry Key:<br>
+– Change permissions, remove the special NT Group “Everyone”, add your Post.Office -user with Full Control rights, add Administrator user with Read permissions. Make this change recursive by selecting ” (X)Replace Permissions on Existing Sub-keys”! (Security -> Permissions)</li>
+<li>Copy the PostOffice directory from backup over the new PostOffice directory. Fix permissions recursively back to the default values<br>
+– Run File Manager and highlight your post.office directory.<br>
+– Take ownership of the directory and answer “yes” when it asks you if you want to change sub-directories and files as well. (Security -> Owner)<br>
+– Change the permissions, modify the Administrator user with Full Control permissions. Specify that you want to (X)Replace permissions on all sub-directories, (X)Replace permissions on existing files, then click OK. (Security -> Permissions)<br>
+– Replace the current Post.Office directory with the saved directory.<br>
+– Change permissions, remove the special NT Group “Everyone”, add your<br>
+Post.Office-user with “Full Control” Rights, add Administrator with Read rights and make this change recursive by selecting “(X)Replace Permissions on Sub-Directories and (X) Replace Permissions on Existing Files”. (Security -> Permissions)When finished, the Post.Office user should have Full Control, and the Administrator should have Read Only permission over the following directory, its subdirectories and files: <\winnt35\system32>\spool\post.office\</li>
+<li>Assign “Change” Rights to Administrators in the PostOfficeDir/log directory and make this change recursive by selecting “(X)Replace Permissions on Sub-Directories and (X) Replace Permissions on Existing Files”. (Security -> Permissions)When finished, the Post.Office user should have Full Control, and the Administrator should have Change permission over the following directory, its subdirectories and files: <\winnt35\system32>\spool\post.office\log\</li>
+<li>Copy the mailbox directory from backup over the new MailboxDir directory. Assign your post.office-user with Full Control Rights and remove Everyone. Make this change recursive by selecting “(X)Replace Permissions on Sub-Directories and (X) Replace Permissions on Existing Files”. (Security -> Permissions)When finished, the Post.Office user should have Full Control over the following directory, its subdirectories and files: <\winnt35\system32>\spool\post.office\mailbox\</li>
+<li>Start the service.</li>
+</ol><p>Remember, because you have restored account information (including your <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="cabaa5b9bea7abb9beafb88aa2a5b9bea4aba7afe4aea5a7aba3a4a4aba7af">[email protected]</a> account) from your old host to your new host, you will have to sign on with your original “Postmaster” e-mail address and “original” Postmaster password. Then you will have to modify your restored account information to match the new configuration of your new host.</p>
+<p>If your host name or domainname is different on your new host you will need to:</p>
+<ul><li>edit the email address of your Postmaster account to refer to the newpostofficehostname.yourdomainname address.</li>
+<li>change the e-mail addresses for any user accounts that have the host name defined within them or who’s domainname is also changing. If you are implementing some form of “Host Name Hiding” you will probably not need to change all your users unless they are still referencing the host name in one of their email-addresses.</li>
+<li>check your Postmaster account and change any of your forwardee’s to have the corrected address</li>
+<li>check your Post.Office Address Completion Domain or your Local Domain fields, you may need to change your host name there as well.</li>
+<li>don’t forget you’ll also need to have your DNS revised to point your domain’s mail (MX record) to the new name hostname.domainname and you will need an Address Record (A record) for that host name as well.</li>
+<li>If your mail clients are connecting to Post.Office SMTP and POP3 servers via the server name hostname.domainname you will need to change your clients to point to newhostname.domainname.</li>
+</ul><p>If your TCP/IP address is different on your new host, you will need to:</p>
+<ul><li>-change the Internet addresses for any accounts that have the tcp/ip address defined within them. Three of these accounts are special accounts. Display a list of all your user’s from the Post.Office configuration forms. At the end of the list are the Special Accounts. They list the Account Manager, Configuration Manager Error Handler. Modify the e-mail addresses on these accounts to reference your new TCP/IP address instead of the old.</li>
+<li>don’t forget you need to have your DNS revised to point your domain’s A record for that host. It now needs to point to the new tcp/ip address.</li>
+</ul><div class="clear"></div>
+				</div>
+				
+			</article></div>
+
+</div>
+
+
+	<div class="sidebar s1">
+		
+		<div class="sidebar-content">
+			
+						
+						
+			<div id="pages-2" class="widget widget_pages"><h3 class="group"><span>Pages</span></h3>		<ul><li class="page_item page-item-37"><a href="https://ironsummitmedia.github.io/home/">Home</a></li>
+<li class="page_item page-item-9"><a href="https://ironsummitmedia.github.io/startbootstrap-agency/">Startbootstrap Agency</a></li>
+<li class="page_item page-item-35"><a href="https://ironsummitmedia.github.io/startbootstrap-agency-2/">Startbootstrap Agency</a></li>
+<li class="page_item page-item-40"><a href="https://ironsummitmedia.github.io/startbootstrap-business-casual/">Startbootstrap business casual</a></li>
+<li class="page_item page-item-27"><a href="https://ironsummitmedia.github.io/startbootstrap-creative/">Startbootstrap Creative</a></li>
+<li class="page_item page-item-33"><a href="https://ironsummitmedia.github.io/startbootstrap-freelancer/">Startbootstrap Freelancer</a></li>
+<li class="page_item page-item-50"><a href="https://ironsummitmedia.github.io/startbootstrap-grayscale/">Startbootstrap Grayscale</a></li>
+<li class="page_item page-item-29"><a href="https://ironsummitmedia.github.io/startbootstrap-landing-page/">Startbootstrap Landing Page</a></li>
+<li class="page_item page-item-44"><a href="https://ironsummitmedia.github.io/startbootstrap-modern-business/">Startbootstrap Modern Business</a></li>
+<li class="page_item page-item-25"><a href="https://ironsummitmedia.github.io/startbootstrap-sb-admin/">Startbootstrap SB Admin</a></li>
+<li class="page_item page-item-31"><a href="https://ironsummitmedia.github.io/startbootstrap-sbadmin-2/">Startbootstrap SBAdmin 2</a></li>
+<li class="page_item page-item-48"><a href="https://ironsummitmedia.github.io/startbootstrap-scrolling-nav/">Startbootstrap Scrolling Nav</a></li>
+<li class="page_item page-item-46"><a href="https://ironsummitmedia.github.io/startbootstrap-simple-sidebar/">Startbootstrap Simple Sidebar</a></li>
+<li class="page_item page-item-42 current_page_item"><a href="https://ironsummitmedia.github.io/startbootstrap-stylish-portfolio/">Startbootstrap stylish portfolio</a></li>
+		</ul></div>			
+		</div>
+		
+	</div>
+	
+
+				</div>
+				
+				<footer id="footer"><div id="footer-bottom">
+						
+						<a id="back-to-top" href="#"><i class="fa fa-angle-up"></i></a>
+							
+						<div class="pad group">
+							
+							<div class="grid one-half">
+								
+																
+						
+								
+							</div>
+							
+							<div class="grid one-half last">	
+																																</div>
+						
+						</div>
+
+					</div>
+
+				</footer></div>	
+		</div>
+	</div>
+
+</div>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript" src="https://ironsummitmedia.github.io/wp-content/themes/boxstyle/js/jquery.fitvids.js"></script><script type="text/javascript" src="https://ironsummitmedia.github.io/wp-content/themes/boxstyle/js/owl.carousel.min.js"></script><script type="text/javascript" src="https://ironsummitmedia.github.io/wp-content/themes/boxstyle/js/jq-sticky-anything.min.js"></script><script type="text/javascript" src="https://ironsummitmedia.github.io/wp-content/themes/boxstyle/js/scripts.js"></script></body></html>
